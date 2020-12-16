@@ -1,17 +1,10 @@
 <template>
     <div>
-        <head>
-        <meta charset="utf-8">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
-        
-        
-      </head>
+      
 
     
 
-    <body>
+    
         <header id="video">
             <video id="myVideo" autoplay="" muted="" loop="">
                 <source src="https://i.imgur.com/LiY18UE.mp4" type="video/mp4"/>
@@ -174,7 +167,7 @@
                 </div>
             </div>
         </footer>
-    </body>
+    
     </div>
 </template>
 
