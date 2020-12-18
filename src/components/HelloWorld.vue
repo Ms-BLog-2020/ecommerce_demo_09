@@ -364,9 +364,9 @@ export default {
     background-color: green;
     height: 5px;
   }
-  section {
+  section.button.sticky-top {
     text-align: center;
-    padding: 80px;
+    padding: 30px 80px;
   }
 
 
