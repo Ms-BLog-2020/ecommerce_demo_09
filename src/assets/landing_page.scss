@@ -105,8 +105,8 @@
     }
 
     
-    section#tools .powder_box {
-    min-height: 600px;
+    section#tools .powder_box,section#tools .tea,section#tools .cover {
+    min-height: 450px;
     }
     section#tools .powder_box:hover img#powder_spoon {
     transform: scale(1.2) translateX(-50%);
@@ -157,10 +157,7 @@
     top: 45%;
     }
 
-    section#tools .tea {
-        min-height: 600px;
-    }
-
+    
     section#tools .tea:hover img#brush {
     transform: scale(1.2) translate(-45%, -47%);
     }
@@ -217,10 +214,7 @@
 
 
 
-
-    section#tools .cover {
-        min-height: 600px;
-    }
+   
     section#tools .cover:hover img#cover {
     transform: translate(-70%, -50%);
     }
