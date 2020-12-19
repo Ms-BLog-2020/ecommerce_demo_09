@@ -96,7 +96,9 @@
             <div class="container-fluid">
                 <div class="row">
                 <div class="line line01"></div>
-                <div class="col-md-6 img" data-bottom-top="transform: translateY(-100px);opacity: 0" data-center="transform: translateY(0px);opacity: 1"><img id="step01" src="https://i.imgur.com/0ysURYv.jpg"/></div>
+                <div class="col-md-6 img" data-bottom-top="transform: translateY(-100px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">
+                <img id="step01" class="mb-5" src="https://i.imgur.com/0ysURYv.jpg"/>
+                </div>
                 <div class="col-md-6 content content01" data-bottom-top="transform: translateY(-20px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">
                     <h1>備茶</h1>
                     <h4>さどうぐ じゅんび</h4>
