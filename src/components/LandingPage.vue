@@ -107,7 +107,8 @@
                 </div>
                 <div class="row">
                 <div class="line line02"></div>
-                <div class="col-md-6 img" data-bottom-top="transform: translateY(-100px);opacity: 0" data-center="transform: translateY(0px);opacity: 1"><img class="mb-5" id="step02" src="https://i.imgur.com/r27JR6F.jpg"/></div>
+                <div class="col-md-6 img" data-bottom-top="transform: translateY(-100px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">
+                <img class="mb-5" id="step02" src="https://i.imgur.com/r27JR6F.jpg"/></div>
                 <div class="col-md-6 orderlast content" data-bottom-top="transform: translateY(-100px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">
                     <h1>沏茶</h1>
                     <h4>きっさ てじゅん</h4>
@@ -117,7 +118,8 @@
                 <div class="row">
                 <div class="line line03"></div>
                 <div class="line line04"></div>
-                <div class="col-md-4 img" data-bottom-top="transform: translateY(-100px);opacity: 0" data-center="transform: translateY(0px);opacity: 1"><img id="step03" class="mb-5" src="https://i.imgur.com/EDQJ3d7.jpg"/></div>
+                <div class="col-md-4 img" data-bottom-top="transform: translateY(-100px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">
+                <img id="step03" class="mb-5" src="https://i.imgur.com/EDQJ3d7.jpg"/></div>
                 <div class="col-md-4 content content03" data-bottom-top="transform: translateY(-100px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">
                     <h1>奉茶</h1>
                     <h4>ぽんちゃ</h4>
@@ -126,7 +128,8 @@
                     <h4>お茶を飲む</h4>
                     <p>客人以右手拿杯、左手托住杯底, 品嘗後將茶碗歸還, 茶主會再將客人的茶碗清洗, 繼續為客人沏茶。<br> 客人們都品完茶後, 茶主將茶碗清洗乾淨並擦拭完後, 再將冷水倒入鍋內、把擦拭乾淨的茶具歸位完畢後, 茶會就告一段落。</p>
                 </div>
-                <div class="col-md-4 cup" data-bottom-top="transform: translateY(-100px);opacity: 0" data-center="transform: translateY(0px);opacity: 1"><img id="cup_step" src="https://i.imgur.com/AvuTyHM.png"/></div>
+                <div class="col-md-4 cup" data-bottom-top="transform: translateY(-100px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">
+                <img id="cup_step" src="https://i.imgur.com/AvuTyHM.png"/></div>
                 </div>
             </div>
             </section>

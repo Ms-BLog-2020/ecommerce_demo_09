@@ -278,19 +278,19 @@
     z-index: 3;
     }
     section#steps .line01 {
-    top: 105px;
+    top: 190px;
     }
     section#steps .line02 {
     left: 20%;
-    top: 900px;
+    top: 990px;
     }
     section#steps .line03 {
-    top: 1580px;
+    top: 1735px;
     width: 500px;
     left: 46%;
     }
     section#steps .line04 {
-    top: 1880px;
+    top: 2030px;
     width: 470px;
     left: 35%;
     }
@@ -314,7 +314,6 @@
     transform: translateX(-50%);
     position: relative;
     margin-bottom: 20px;
-    cursor: pointer;
     }
     section#steps .content {
     display: flex;
@@ -356,6 +355,7 @@
     background-image: url(https://i.imgur.com/TiFd46G.jpg);
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
     margin-top: 0px;
     margin-bottom: 0px;
     }
@@ -384,7 +384,8 @@
     letter-spacing: 5px;
     position: relative;
     top: 500px;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%,-50%);
     cursor: pointer;
     }
     footer.jumbotron .container h3 {
@@ -441,120 +442,10 @@
             display: none;
         }
 
-        // section#tools .powder_box {
-        // transform: rotate(270deg) translate(20%,-50%) scale(0.6);
-        // top: 50%;
-        // left: 40%;
-        // }
-        
-        // section#tools .powder_box .text {
-        // top: 0%;
-        // left: 50%;
-        // transform: rotate(90deg);
-        // font-size: 24px;
-        // text-align: left;
-        // }
-        // section#tools .powder_box .text .title {
-        // border-bottom: none;
-        // font-size: 24px;
-        // }
-        // section#tools .powder_box .text .intro {
-        // display: none;
-        // }
-        // section#tools .powder_box img#shadow {
-        // transform: rotate(90deg) translate(0%,100%);
-        // opacity: 0.4;
-        // }
-
-
-
-        // section#tools .tea:hover img#brush {
-        // transform: scale(1.2) translate(-45%, -140%);
-        // }
-        // section#tools .tea .text_top {
-        // font-size: 10px;
-        // }
-        // section#tools .tea .text_top .title {
-        // transform: translate(150%,-120%);
-        // border-right: none;
-        // font-size: 12px;
-        // }
-        // section#tools .tea .text_top .intro p {
-        // display: none;
-        // }
-        // section#tools .tea img#tea {
-        // transform: translate(-50%, -150%);
-        // width: 35%;
-        // }
-        // section#tools .tea img#brush {
-        // width: 33%;
-        // transform: translate(-50%, -160%);
-        // }
-        // section#tools .tea img#tea_shadow {
-        // opacity: 0.4;
-        // transform: translate(-65%, -85%);
-        // }
-
-
-        
-        // section#tools .cover .text .title {
-        // transform: translate(-5%,-20%);
-        // border-right: none;
-        // }
-        // section#tools .cover .text .intro {
-        // display: none;
-        // }
-        // section#tools .cover img#shadow {
-        // transform: translate(-68%, -30%);
-        // width: 30%;
-        // }
-        // section#tools .cover img#cover {
-        // transform: translate(-55%, -45%);
-        // width: 20%;
-        // }
-        // section#tools .cover img#powder_box {
-        // transform: translate(-55%, -45%) rotate(165deg) scale(1.5);
-        // width: 13%;
-        // }
 
         section#steps .line {
             display: none;
         }
-
-
-        // section#steps .col-md-6.content {
-        //     padding: 50px;
-        // }
-        // section#steps .col-md-6.content02 {
-        //     padding-top: 150px;
-        // }
-        // section#steps .col-md-6.content h1,h4 {
-        //     text-align: center;
-        // }
-        // img#step02 {
-        //     position: absolute;
-        //     top: 50%;
-        //     left: 50%;
-        //     transform: translate(-50%,-300%);
-        //     z-index: 333;
-        // }
-        // section#steps .col-md-4.content03, section#steps .col-md-4.content04 {
-        //     padding: 50px;
-        //     padding-top: 550px;
-        //     z-index: 3;
-        // }
-        // section#steps .col-md-4.content03 h1,h4 {
-        //     text-align: center;
-        // }
-
-        // img#step03 {
-        //     position: absolute;
-        //     transform: translate(0%,-30%);
-        // }
-        // img#cup_step {
-        //     padding-bottom: 80px;
-           
-        // }
 
 
         footer.jumbotron {
@@ -583,8 +474,9 @@
         .container-fluid {
             height: 4000px;
         }
-        .content {
-            align-items: center;
+        section#steps .content {
+        padding: 0px 50px;
+        align-items: center;
         }
         .orderlast {
         order: 1;
