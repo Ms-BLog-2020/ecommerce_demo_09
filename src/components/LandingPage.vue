@@ -107,21 +107,19 @@
                 </div>
                 <div class="row">
                 <div class="line line02"></div>
-                <div class="col-md-6 content content02" data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">
+                <div class="col-md-6 img" data-bottom-top="transform: translateY(-100px);opacity: 0" data-center="transform: translateY(0px);opacity: 1"><img class="mb-5" id="step02" src="https://i.imgur.com/r27JR6F.jpg"/></div>
+                <div class="col-md-6 orderlast content" data-bottom-top="transform: translateY(-100px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">
                     <h1>沏茶</h1>
                     <h4>きっさ てじゅん</h4>
                     <p>茶主會以左手持茶杓、右手打開茶蓋, 讓茶碗面向自己, 再將熱水注入後攪動, 這是茶會開始前清理茶具的方式。<br>清洗完後, 將廢水倒去、擦拭完畢後, 茶主會再向客人表示禮儀, 才開始正式沏茶, 而助手此時也會奉上茶點。<br>接著以茶杓取出抹茶粉, 量為二分之一匙, 放入兩杓後再將熱水慢慢倒入, 倒入完畢後,以茶筅均勻快速地攪拌直至出現泡沫。   </p>
                 </div>
-                <div class="col-md-6 img">
-                    <div class="frame">
-                    <img id="step02" src="https://i.imgur.com/r27JR6F.jpg"/>
-                    </div>
+                <!-- 將 col-md.6.img 移動到 .content 上方並修改增加自定義 orderlast-->
                 </div>
                 </div>
                 <div class="row">
                 <div class="line line03"></div>
                 <div class="line line04"></div>
-                <div class="col-md-4 img" data-bottom-top="transform: translateY(-100px);opacity: 0" data-center="transform: translateY(0px);opacity: 1"><img id="step03" src="https://i.imgur.com/EDQJ3d7.jpg"/></div>
+                <div class="col-md-4 img" data-bottom-top="transform: translateY(-100px);opacity: 0" data-center="transform: translateY(0px);opacity: 1"><img id="step03" class="mb-5" src="https://i.imgur.com/EDQJ3d7.jpg"/></div>
                 <div class="col-md-4 content content03" data-bottom-top="transform: translateY(-100px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">
                     <h1>奉茶</h1>
                     <h4>ぽんちゃ</h4>

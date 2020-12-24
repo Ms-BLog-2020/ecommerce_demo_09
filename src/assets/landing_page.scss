@@ -106,7 +106,7 @@
 
     
     section#tools .powder_box,section#tools .tea,section#tools .cover {
-    min-height: 600px;
+    min-height: 550px;
     }
     section#tools .powder_box:hover img#powder_spoon {
     transform: scale(1.2) translateX(-50%);
@@ -317,6 +317,10 @@
     cursor: pointer;
     }
     section#steps .content {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: center;
     padding: 0px 150px;
     color: #7d7881;
     }
@@ -339,7 +343,7 @@
     padding-top: 20px;
     }
    
-    img#step02 {
+    img#step02.mb-5 {
         padding-right: 0px;
     }
     .col-md-6.img {
@@ -390,6 +394,9 @@
     top: 500px;
     transform: translateY(-50%);
     opacity: 0.6;
+    }
+    .orderlast {
+        order: -1;
     }
     @media screen and (max-width: 600px) {
         header#video {
@@ -576,5 +583,12 @@
         .container-fluid {
             height: 4000px;
         }
+        .content {
+            align-items: center;
+        }
+        .orderlast {
+        order: 1;
+        }
+        
 
     }
