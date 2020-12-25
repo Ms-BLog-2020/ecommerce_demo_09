@@ -335,7 +335,6 @@ export default {
   }
   header.jumbotron hr {
     max-width: 60px;
-    border: solid 3px #ff6e3a;
   }
   header.jumbotron .container {
     color: white;
