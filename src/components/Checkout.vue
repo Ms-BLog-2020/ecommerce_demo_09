@@ -18,7 +18,7 @@
         <body>
            
          
-          <header class="jumbotron">
+          <header class="jumbotron" id="checkout">
             <div class="container">
               <div class="row">
                 <div class="block"></div>

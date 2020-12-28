@@ -2,8 +2,7 @@
     font-family: "Noto Serif JP", "Noto Serif TC";
     }
 
-    html, body {
-    overflow-x: hidden;
+    html{
     width: 100%;
     }
 
@@ -400,6 +399,7 @@
         order: -1;
     }
     @media screen and (max-width: 600px) {
+        
         header#video {
             height: 580px;
         }
@@ -472,7 +472,7 @@
             position: absolute;
         }
         .container-fluid {
-            height: 4000px;
+            min-height: 3000px;
         }
         section#steps .content {
         padding: 0px 50px;
@@ -481,6 +481,6 @@
         .orderlast {
         order: 1;
         }
-        
+       
 
     }

@@ -136,12 +136,11 @@
         <footer class="jumbotron"> 
             <div class="container">
                 
-                <div class="text-center">
                 <router-link to="/home" tag="div">
                 <h1>一起泡茶 • 享受當下</h1>
                 <h3>一緒にお茶を作る  今を楽しむ</h3>
                 </router-link>
-                </div>
+                
                 
                 <div class="row top">
                 <div class="col-md-4">

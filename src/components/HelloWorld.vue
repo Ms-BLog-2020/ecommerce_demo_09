@@ -66,7 +66,7 @@
               </div>
               
             </nav>
-            <header class="jumbotron jumbotron-fluid jumbotron-bg d-flex align-items-end">
+            <header class="jumbotron jumbotron-fluid jumbotron-bg d-flex align-items-end" id="home">
               <div class="container">
                 <div class="p-3 bg-lighter">
                   <h1 class="display-3">你有多久沒有好好靜下來喝一杯茶了?</h1>
@@ -272,20 +272,6 @@ export default {
 };
 
 
-  // export default {
-  //   mounted(){
-  //     $(document).ready(function () {
-  //     $('#removeModal').on('show.bs.modal', function (event) {
-  //       var button = $(event.relatedTarget) // 選則當初觸發事件的按鈕
-  //       var title = button.data('title') // 使用 data-* 來取得特定內容
-
-  //       var modal = $(this)
-  //       modal.find('.modal-title').text('確認' + title) // 寫入資料
-  //     })
-  //   });
-  //   }
-  // }
-
      
   </script>
 
@@ -320,23 +306,23 @@ export default {
     transition-duration: 0.5s;
   }
 
-  header.jumbotron {
+  header#home.jumbotron {
     text-align: center;
     background-image: url(https://res.klook.com/images/fl_lossy.progressive,q_65/c_fit,w_1295,h_720,f_auto/w_80,x_15,y_15,g_south_west,l_klook_water/activities/q75bagntcomdftmlz0pr/TeaCeremonyinHokkaido.webp);
     background-size: cover;
     background-position:50% 40%;
     background-attachment: fixed;
     margin-bottom: 0px;
-    padding: 0px
+    padding: 0px;
   }
-  header.jumbotron h4 {
+  header#home.jumbotron h4 {
     opacity: 0.6;
     font-weight: normal;
   }
-  header.jumbotron hr {
+  header#home.jumbotron hr {
     max-width: 60px;
   }
-  header.jumbotron .container {
+  header#home.jumbotron .container {
     color: white;
     padding: 200px 0px;
   }

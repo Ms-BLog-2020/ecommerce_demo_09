@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: bold;
 }
 
-header.jumbotron {
+header#checkout.jumbotron {
     background-image: url(https://res.klook.com/images/fl_lossy.progressive,q_65/c_fit,w_1295,h_720,f_auto/w_80,x_15,y_15,g_south_west,l_klook_water/activities/q75bagntcomdftmlz0pr/TeaCeremonyinHokkaido.webp);
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -20,12 +20,12 @@ header.jumbotron {
     height: 720px;
     
 }
-header.jumbotron h4{
+header#checkout.jumbotron h4{
     color: green;
 }
 
 
-header.jumbotron .block {
+header#checkout.jumbotron .block {
     padding: 300px;
     width: 80%;
     background-color: white;
@@ -37,37 +37,37 @@ header.jumbotron .block {
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
     opacity: 0.9;
 }
-header.jumbotron .col-icon {
+header#checkout.jumbotron .col-icon {
     height: 100px;
 }
-header.jumbotron .col-icon img.tea, header.jumbotron .col-icon .home, header.jumbotron .col-icon i.fa.fa-caret-right, header.jumbotron .col-icon .finish_order, header.jumbotron .col-icon .checkout_form {
+header#checkout.jumbotron .col-icon img.tea, header#checkout.jumbotron .col-icon .home, header#checkout.jumbotron .col-icon i.fa.fa-caret-right, header.jumbotron .col-icon .finish_order, header.jumbotron .col-icon .checkout_form {
     display: inline-block;
     margin: 5px;
     letter-spacing: 2px;
 }
-header.jumbotron .col-icon .navigation {
+header#checkout.jumbotron .col-icon .navigation {
     color: gray;
     font-weight: 700;
     letter-spacing: 1px;
     margin-top: 20px;
 }
-header.jumbotron .col-icon .navigation .japanese {
+header#checkout.jumbotron .col-icon .navigation .japanese {
     font-size: 5px;
 }
-header.jumbotron .col-icon .navigation .checkout_form {
+header#checkout.jumbotron .col-icon .navigation .checkout_form {
     color: green;
     font-weight: 900;
 }
-header.jumbotron .col-icon img {
+header#checkout.jumbotron .col-icon img {
     width: 70px;
     padding-bottom: 20px;
     opacity: 1;
 }
 
-header.jumbotron .col-checkout .col-buy-left {
+header#checkout.jumbotron .col-checkout .col-buy-left {
     padding: 25px
 }
-header.jumbotron .col-checkout .col-buy-right {
+header#checkout.jumbotron .col-checkout .col-buy-right {
     padding: 25px
 }
 button.btn.btn-success,button.btn.btn-danger {
@@ -76,12 +76,12 @@ button.btn.btn-success,button.btn.btn-danger {
     margin: 0px 3px;
 }
 @media screen and (max-width: 600px){
-    header.jumbotron {
-        height: 2000px;
+    header#checkout.jumbotron {
+        min-height: 2000px;
         background-size: auto 100%;
     }
-    header.jumbotron .block{
-        height: 2300px;
+    header#checkout.jumbotron .block{
+        min-height: 2300px;
         padding: 0px;
         width: 95%;
         margin-bottom: 0%
