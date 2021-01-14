@@ -29,7 +29,7 @@
               </div>
               <button class="btn btn-sm btn-cart" data-toggle="dropdown" data-flip="false">
                 <i class="fa fa-shopping-cart text-dark fa-2x" aria-hidden="true"></i>
-                <span class="badge badge-pill badge-danger" v-for="item in cart.carts">{{ item.qty }}</span>
+                <span class="badge badge-pill badge-danger" v-if="cart.carts">{{ cart.carts.length }}</span>
                 <span class="sr-only">unread messages</span>
               </button>
               <div class="dropdown-menu dropdown-menu-right p-3" style="min-width: 300px" data-offset="400">
