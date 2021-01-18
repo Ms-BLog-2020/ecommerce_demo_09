@@ -14,6 +14,7 @@ import Checkout from '@/components/Checkout';
 import Productdetail from '@/components/Productdetail';
 import CheckoutFinishPay from '@/components/CheckoutFinishPay';
 import LandingPage from '@/components/LandingPage';
+import EventPage from '@/components/EventPage';
 
 Vue.use(VueRouter)
 
@@ -50,6 +51,11 @@ export default new VueRouter({
             name: 'LandingPage',
             path: '/',
             component: LandingPage,
+        },
+        {
+            name: 'EventPage',
+            path: '/event_page',
+            component: EventPage,
         },
         {
             name: 'Checkout',
