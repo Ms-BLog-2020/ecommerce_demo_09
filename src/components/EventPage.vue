@@ -51,25 +51,27 @@
             </header>
             <section id="event_intro">
             <div class="container-fluid">
-                <div class="row">
-                <div class="col-md-12">
+                <div class="row" id="event_page">
+                
                     <div class="col-md-4 event_intro" id="event"><img class="people" id="logo_event_intro" src="https://i.imgur.com/kGfHTpo.png"/>
-                    <h3 class="event_intro" id="intro">小班制體驗</h3>
-                    <p class="event_intro_content" id="event">每一堂課程皆有活動人數限定,讓您的品茶能夠有最佳品質體驗與感受! 每個人也都配有專屬的一套茶具,防疫期間可安心使用!趕快來報名體驗吧!!</p>
+                        <h3 class="event_intro" id="intro">小班制體驗</h3>
+                        <p class="event_intro_content" id="event">每一堂課程皆有活動人數限定,讓您的品茶能夠有最佳品質體驗與感受! 每個人也都配有專屬的一套茶具,防疫期間可安心使用!趕快來報名體驗吧!!</p>
                     </div>
                     <div class="col-md-4 event_intro" id="event"><img class="tradition" id="logo_event_intro" src="https://i.imgur.com/Ofg0dY8.png"/>
-                    <h3 class="event_intro" id="intro">傳統正宗</h3>
-                    <p class="event_intro_content" id="event">茶道老師均為日本傳統茶道裹千家流派的正宗弟子, 讓您體驗到最正宗的日本茶道精神! 只要跟著老師的腳步, 您就能一步步體會到日本茶道之妙!!</p>
+                        <h3 class="event_intro" id="intro">傳統正宗</h3>
+                        <p class="event_intro_content" id="event">茶道老師均為日本傳統茶道裹千家流派的正宗弟子, 讓您體驗到最正宗的日本茶道精神! 只要跟著老師的腳步, 您就能一步步體會到日本茶道之妙!!</p>
                     </div>
                     <div class="col-md-4 event_intro" id="event"><img class="season" id="logo_event_intro" src="https://i.imgur.com/oDEemw2.png"/>
-                    <h3 class="event_intro" id="intro">最佳時節</h3>
-                    <p class="event_intro_content" id="event">茶道在不同時節都有些微差異的流程, 但在櫻花時節絕對是體驗茶道的最佳季節!!在這櫻雪紛飛的盛放中, 一邊品茶一邊賞櫻, 何不樂哉!!</p>
+                        <h3 class="event_intro" id="intro">最佳時節</h3>
+                        <p class="event_intro_content" id="event">茶道在不同時節都有些微差異的流程, 但在櫻花時節絕對是體驗茶道的最佳季節!!在這櫻雪紛飛的盛放中, 一邊品茶一邊賞櫻, 何不樂哉!!</p>
                     </div>
                 </div>
                 <div class="col-md-12" id="register_bottom"> 
+                    <router-link to="/home" tag="div">
                     <button class="btn-outline-light register_bottom">馬上報名</button>
+                    </router-link>
                 </div>
-                </div>
+                
             </div>
             </section>
 
@@ -306,8 +308,8 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("https://i.imgur.com/oFJQ7XC.jpg");
     background-attachment: fixed;
     background-size: cover;
-    min-height: 600px;
-    padding: 0px;
+    min-height: 850px;
+    padding-top: 200px;
     margin: 0px;
     color: white;
     text-align: center;
@@ -327,11 +329,11 @@
     color: gray;
     }
     section#event_intro .container-fluid {
-    margin: 30px;
+    margin: 10px;
     }
     section#event_intro .container-fluid .event_intro {
     padding: 50px;
-    position: relative;
+    
     }
     section#event_intro .container-fluid .event_intro h3#intro {
     padding: 0px;
