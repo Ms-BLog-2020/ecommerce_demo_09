@@ -11,13 +11,13 @@
                 <div class="event_img event_time b">
                 <h3 class="event_title event_time_title" id="event">品茶活動時間</h3>
                 <div class="time time_01"><i class="fa fa-caret-right" id="event"></i>
-                    <p class="time_text" id="event">櫻花初開季 2021/1/16 - 2021/2/24</p>
+                    <p class="time_text" id="event">櫻花初開季 2021/1/16 - 2021/2/1</p>
                 </div>
                 <div class="time time_02"> <i class="fa fa-caret-right" id="event"> </i>
-                    <p class="time_text" id="event">櫻花盛放季 2021/1/16 - 2021/2/24</p>
+                    <p class="time_text" id="event">櫻花盛放季 2021/2/2 - 2021/2/28</p>
                 </div>
                 <div class="time time_03"><i class="fa fa-caret-right" id="event"></i>
-                    <p class="time_text" id="event">櫻花收尾季 2021/1/16 - 2021/2/24</p>
+                    <p class="time_text" id="event">櫻花收尾季 2021/3/1 - 2021/3/7</p>
                 </div>
                 </div>
                 <div class="event_img event_top c">
