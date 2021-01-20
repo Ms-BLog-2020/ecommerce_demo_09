@@ -52,13 +52,7 @@
                       <tbody>
                         <tr class="py-5" v-for="item in cart.carts" :key="item.id">
                           <td class="align-middle text-center">
-                            <button
-                              href="#removeModal"
-                              class="btn btn-outline-danger btn-sm"
-                              data-toggle="modal"
-                              :data-title="`刪除 ${item.product.title} ${item.qty} 件`"
-                              @click="emitRemoveCart(item.id, item.product.title)"
-                            >
+                              <button type="button" class="btn btn-outline-danger btn-sm" @click="deleteCart(item.id)">
                               <i class="far fa-trash-alt"></i>
                             </button>
                           </td>
@@ -77,7 +71,7 @@
                     </router-link>
                   </div>
                 </div>
-                <router-link to="/admin/products" class="btn btn-sm btn-admin ml-2">
+                <router-link to="/login" class="btn btn-sm btn-admin ml-2">
                   <i class="fas fa-user text-white fa-lg" aria-hidden="true"></i>
                 </router-link>
               </div>
