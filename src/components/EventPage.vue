@@ -106,8 +106,11 @@
     }
 
     html.skrollr.skrollr-desktop {
+        max-width: 1680px;
     }
-
+    .container-fluid {
+        max-width: 1680px;
+    }
     header#event_page .container-fluid {
         margin: 0px;
         padding: 0px;
