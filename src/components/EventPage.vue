@@ -49,13 +49,14 @@
                 </div>
             </div>
             </header>
+            
+            <section id="event_intro">
             <section id="video">
                 <video id="myVideo" autoplay="" muted="" loop="">
                     <source src="https://i.imgur.com/BDNpgSJ.mp4" type="video/mp4"/>
                 </video>
                 <embed src="" autostart="true" loop="true" width="2" height="0"/>
             </section>
-            <section id="event_intro">
             <div class="container-fluid">
                 <div class="row" id="event_page">
                 
@@ -78,8 +79,10 @@
                     </router-link>
                 </div>
                 
+                
             </div>
             </section>
+            
 
     </div>
 </template>
@@ -99,9 +102,11 @@
 
 <style>
     * {
-        font-family: 'Noto Serif JP','Noto Serif TC'
+        font-family: 'Noto Serif JP','Noto Serif TC';
     }
 
+    html.skrollr.skrollr-desktop {
+    }
 
     header#event_page .container-fluid {
         margin: 0px;
@@ -323,7 +328,7 @@
     background-attachment: fixed;
     background-size: cover;
     min-height: 850px;
-    padding-top: 200px;
+    padding-top: 180px;
     margin: 0px;
     color: white;
     text-align: center;
@@ -385,6 +390,14 @@
     }
     100% {
         transform: rotate(0deg);
+    }
+    }
+    @media screen and (max-width: 600px) {
+    header#event_page .container-fluid {
+        min-height: 300px;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "a" "b" "f";
     }
     }
 </style>
