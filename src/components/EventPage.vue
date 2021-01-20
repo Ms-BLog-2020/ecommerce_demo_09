@@ -110,6 +110,7 @@
     }
     .container-fluid {
         max-width: 1440px;
+        overflow-x:hidden;
     }
     header#event_page .container-fluid {
         margin: 0px;
