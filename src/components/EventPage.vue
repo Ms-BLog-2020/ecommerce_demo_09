@@ -49,6 +49,12 @@
                 </div>
             </div>
             </header>
+            <section id="video">
+                <video id="myVideo" autoplay="" muted="" loop="">
+                    <source src="https://i.imgur.com/BDNpgSJ.mp4" type="video/mp4"/>
+                </video>
+                <embed src="" autostart="true" loop="true" width="2" height="0"/>
+            </section>
             <section id="event_intro">
             <div class="container-fluid">
                 <div class="row" id="event_page">
@@ -83,8 +89,8 @@
     export default {
         mounted() {
             
-            var video = document.getElementById("myVideo");
-            
+            var video = document.getElementById("myEvent");
+            var video_02 = document.getElementById("myVideo");
             },
             
         };
@@ -95,6 +101,7 @@
     * {
         font-family: 'Noto Serif JP','Noto Serif TC'
     }
+
 
     header#event_page .container-fluid {
         margin: 0px;
@@ -304,6 +311,13 @@
     opacity: 0;
     }
 
+    section#video #myVideo {
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
     section#event_intro {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("https://i.imgur.com/oFJQ7XC.jpg");
     background-attachment: fixed;
@@ -313,6 +327,9 @@
     margin: 0px;
     color: white;
     text-align: center;
+    display: block;
+    vertical-align: top;
+    
     }
     section#event_intro button.btn-outline-light.register_bottom {
         background-color: transparent;
@@ -349,6 +366,7 @@
     section#event_intro .container-fluid .people, section#event_intro .container-fluid .tradition, section#event_intro .container-fluid .season {
     opacity: 0.8;
     transition-duration: 0.5s;
+    padding-bottom: 20px;
     }
     section#event_intro .container-fluid .people:hover, section#event_intro .container-fluid .tradition:hover, section#event_intro .container-fluid .season:hover {
     opacity: 1;
