@@ -106,11 +106,12 @@
     }
 
     html.skrollr.skrollr-desktop {
-        max-width: 1518px;
+        max-width: 1680px;
+        overflow-x: hidden;
     }
     .container-fluid {
-        max-width: 1518px;
-        overflow-x:hidden;
+        max-width: 1680px;
+        overflow-x: hidden;
     }
     header#event_page .container-fluid {
         margin: 0px;
