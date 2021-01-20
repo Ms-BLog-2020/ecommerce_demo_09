@@ -396,8 +396,11 @@
     header#event_page .container-fluid {
         min-height: 300px;
         grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-areas: "a" "b" "f";
+        grid-template-columns:50%;
+        grid-template-areas: "a a""b b""c c""d e""f f""g g";
+    }
+    section#event_intro {
+        display: none;
     }
     }
 </style>
