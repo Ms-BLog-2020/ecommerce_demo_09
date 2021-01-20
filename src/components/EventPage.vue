@@ -1,7 +1,7 @@
 <template>
     <div>
         <header id="event_page">
-            <div class="container-fluid">
+            <div class="container-fluid" id="event_page_container">
                 <div class="event_img event_sakura a">
                 <router-link to="/home" tag="div">
                 <div class="logo"></div>
@@ -57,7 +57,7 @@
                 </video>
                 <embed src="" autostart="true" loop="true" width="2" height="0"/>
             </section>
-            <div class="container-fluid">
+            <div class="container-fluid" id="event_page_container">
                 <div class="row" id="event_page">
                 
                     <div class="col-md-4 event_intro" id="event"><img class="people" id="logo_event_intro" src="https://i.imgur.com/kGfHTpo.png"/>
@@ -109,7 +109,7 @@
         max-width: 1680px;
         overflow-x: hidden;
     }
-    .container-fluid {
+    .container-fluid#event_page_container {
         max-width: 1680px;
         overflow-x: hidden;
     }
