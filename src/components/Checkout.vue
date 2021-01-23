@@ -24,11 +24,16 @@
                 <div class="block"></div>
                 <div class="col-md-12 col-icon">
                   <div class="navigation">
+                    
                     <img class="tea" src="https://i.imgur.com/YiEgjNa.png" alt=""/>
+                    
                     <div class="home">
+                    <router-link to="/home" tag="div">
                       <div class="japanese">ホーム </div>
                       <div class="chinese">首頁     </div>
-                    </div><i class="fa fa-caret-right"> </i>
+                    </router-link>
+                    </div>
+                    <i class="fa fa-caret-right"> </i>
                     <div class="checkout_form">
                       <div class="japanese">入る</div>
                       <div class="chinese">輸入</div>

@@ -20,7 +20,7 @@
                     </div>
                     </div>
                     <div class="card-footer d-flex">
-                    <button type="button" class="btn btn-outline-secondary btn-sm" @click="getProduct(item.id)">
+                    <button type="button" class="btn btn-outline-secondary btn-sm" @click.prevent="productLink(item.id)">
                         <i class="fas fa-spinner fa-spin"  v-if="status.loadingItem === product.id"></i>
                         查看更多
                     </button>
@@ -35,57 +35,7 @@
         
         
 
-        <!-- Modal -->
-        <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog shadow-longer">
-                
-                <div class="modal-content">
-                
-                
-                <div class="modal-body top">
-                    <div class="product-image" style="height: 250px; background-size: cover; background-position: center"
-                    :style="{backgroundImage:`url(${product.imageUrl})`}">
-                    </div>
-                </div>
-                
-                <div class="text-center">
-                <img class="circle" src="https://i.imgur.com/5e6ZLkp.png">
-                <img class="tea-logo" src="https://i.imgur.com/bbK9tdf.png">
-                </div>
-                
-                <div class="modal-body bottom">
-                    
-                    
-                    
-                    <div class="text-center title">
-                    <h3 class="modal-title" id="exampleModalLabel">{{product.title}}</h3>
-                    <h6 class="modal-text">{{product.description}}</h6>
-                    <div class="badge badge-pill badge-secondary float-middle ml-2">{{product.category}}</div>
-                    </div>
-                    <p class="modal-text content">{{product.content}}</p>
-                    <select name="" class="form-control mt-3" v-model="product.num">
-                      <option :value="num" v-for="num in 10" :key="num">
-                        選購{{num}} {{product.unit}}
-                      </option>
-                    </select>
-                    <div class="text-muted text-nowrap mr-3">
-                    小計 NTD
-                    <strong>
-                      {{product.price * product.num}}
-                    </strong>
-                      元
-                    </div>
-                    <div class="text-center">
-                    <button type="button" class="btn btn-primary add-to-cart" @click="addtoCart(product.id, product.num)">
-                      <i class="fas fa-spinner fa-spin"  v-if="status.loadingItem === product.id"></i>
-                      加到購物車
-                    </button>
-                    </div>
-                </div>
-               
-                </div>
-            </div>
-        </div>
+        
         
     </div>
 </template>
@@ -129,6 +79,9 @@ export default {
         vm.isLoading = false;  
         vm.status.loadingItem = ''; //Modal打開後將值替換成空的
       });
+    },
+    productLink(id){
+            this.$router.push(`/productdetail/${id}`);
     },
     addtoCart(id,qty=1){ //ES6 預設值設定方法 qty=1
       const vm = this;

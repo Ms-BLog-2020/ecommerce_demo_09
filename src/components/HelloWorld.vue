@@ -97,24 +97,7 @@
                 </div>
               </div>
             </div>
-            <footer class="bg-light text-muted py-5">
-              <div class="container">
-                <ul class="list-inline text-center">
-                  <li class="list-inline-item">© Copright 2020 有茶室</li>
-                  <li class="list-inline-item">
-                    <a class="text-info" href="#">
-                      <i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a class="text-info" href="#">
-                      <i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a class="text-info" href="#">About</a>
-                  </li>
-                </ul>
-              </div>
-            </footer>
+            <HomeFooter />
 
             <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
@@ -147,6 +130,7 @@
 
 import $ from 'jquery'; //載入modal
 import Homesidebar from './Homesidebar';
+import HomeFooter from './HomeFooter';
 
 // $('.dropdown-toggle').dropdown();
 
@@ -163,7 +147,8 @@ var s = skrollr.init();
 
 export default {
   components: {
-        Homesidebar
+        Homesidebar,
+        HomeFooter
   },
   mounted(){
       $(document).ready(function () {

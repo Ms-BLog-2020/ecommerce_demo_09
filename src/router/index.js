@@ -69,7 +69,7 @@ export default new VueRouter({
         },
         {
             name: 'Productdetail',
-            path: '/productdetail',
+            path: '/productdetail/:prodId',
             component: Productdetail,
         },
         {
