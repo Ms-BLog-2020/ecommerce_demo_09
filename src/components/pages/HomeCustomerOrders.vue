@@ -20,7 +20,7 @@
                     </div>
                     </div>
                     <div class="card-footer d-flex">
-                    <button type="button" class="btn btn-outline-secondary btn-sm" @click="getProduct(item.id)">
+                    <button type="button" class="btn btn-outline-secondary btn-sm" @click.prevent="productLink(item.id)">
                         <i class="fas fa-spinner fa-spin"  v-if="status.loadingItem === product.id"></i>
                         查看更多
                     </button>
@@ -129,6 +129,9 @@ export default {
         vm.isLoading = false;  
         vm.status.loadingItem = ''; //Modal打開後將值替換成空的
       });
+    },
+    productLink(id){
+            this.$router.push(`/productdetail/${id}`);
     },
     addtoCart(id,qty=1){ //ES6 預設值設定方法 qty=1
       const vm = this;

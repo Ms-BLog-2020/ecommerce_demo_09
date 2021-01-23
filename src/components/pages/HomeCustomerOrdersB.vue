@@ -81,7 +81,7 @@ export default {
       },
       productLink(id){
             this.$router.push(`/productdetail/${id}`);
-        },
+      },
       addtoCart(id,qty=1){ //ES6 預設值設定方法 qty=1
         const vm = this;
         const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart`;
