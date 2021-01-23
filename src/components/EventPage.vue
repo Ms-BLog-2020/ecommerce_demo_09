@@ -1,5 +1,6 @@
 <template>
     <div>
+        <loading :active.sync="isLoading"></loading>
         <header id="event_page">
             <div class="container-fluid" id="event_page_container">
                 <div class="event_img event_sakura a">
