@@ -91,6 +91,11 @@
 
 <script>
     export default {
+        data() {
+            return{
+                isLoading: false,
+            }
+        },
         mounted() {
             
             var video = document.getElementById("myEvent");
