@@ -83,9 +83,13 @@
                                 <td class="align-middle">{{ item.product.title }}</td>
                                 <td class="align-middle">{{ item.qty }}/{{ item.product.unit }}</td>
                                 <td class="align-middle text-right">{{ item.final_total }}</td>
+                                
                             </tr>
                             <tr>
-                                
+                            <td v-if="cart.final_total !== cart.total" class="list-group-item list-item-total d-flex justify-content-between text-accent">
+                              <span>折扣價</span>
+                              <strong class="h5 mb-0">$ {{cart.final_total}}</strong>
+                            </td>
                             </tr>
                             <tr>
                                 <td colspan="4" class="text-right">合計</td>
@@ -96,6 +100,7 @@
                             </tbody>
                         </table>
                         </div>
+                        
                   </div>
                   <div class="col-md-6 col-sm-12 col-buy-right">
                       <h4>填寫個人資料</h4>

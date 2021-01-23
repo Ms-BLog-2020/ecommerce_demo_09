@@ -8,6 +8,12 @@
         </head>
         <loading :active.sync="isLoading"></loading>
         <header id="event_page">
+            <div class="sakura_shadow">
+                <img id="sakura_shadow" src="https://i.imgur.com/axmJQ5M.png"/>
+            </div>
+            <div class="sakura_flower">
+                <img id="sakura_flower" src="https://i.imgur.com/WOIFE9T.png"/>
+            </div>
             <div class="container-fluid" id="event_page_container">
                 <div class="event_img event_sakura a">
                 <router-link to="/home" tag="div">
@@ -96,6 +102,7 @@
 
 
 <script>
+    
     export default {
         data() {
             return{
@@ -106,6 +113,24 @@
             
             var video = document.getElementById("myEvent");
             var video_02 = document.getElementById("myVideo");
+            $(window).mousemove(function(evt){
+            var pagex=evt.pageX;
+            var pagey=evt.pageY;
+            console.log(pagex + "," + pagey)
+            
+            $(".test").css("left",pagex+"px")
+            $(".test").css("top",pagey+"px")
+            $(".test_02").css("left",pagex+"px")
+            $(".test_02").css("top",pagey+(pagey/150)+"px")
+            
+            $(".test").css
+                ("transform","translateY("+(pagey/-150)+"px)");
+                
+            
+            $(".test").css("transform","rotate("+(pagey/-50)+"deg)")
+            $(".test_02").css("transform","rotate("+(pagey/-50)+"deg)")
+            })
+            
             },
             
         };
@@ -120,6 +145,24 @@
     html.skrollr.skrollr-desktop {
         max-width: 1520px;
         overflow-x: hidden;
+    }
+    header#event_page .sakura_flower {
+    position: absolute;
+    z-index: 0;
+    }
+    header#event_page .sakura_flower img#sakura_flower {
+    width: 50%;
+    height: 50%;
+    transform: rotate(25deg);
+    }
+    header#event_page .sakura_shadow {
+    position: absolute;
+    }
+    header#event_page .sakura_shadow img#sakura_shadow {
+    width: 50%;
+    height: 50%;
+    transform: rotate(20deg);
+    opacity: 0.2;
     }
     .container-fluid#event_page_container {
         max-width: 1520px;
