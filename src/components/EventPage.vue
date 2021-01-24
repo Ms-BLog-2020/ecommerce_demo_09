@@ -118,17 +118,17 @@
             var pagey=evt.pageY;
             console.log(pagex + "," + pagey)
             
-            $(".test").css("left",pagex+"px")
-            $(".test").css("top",pagey+"px")
-            $(".test_02").css("left",pagex+"px")
-            $(".test_02").css("top",pagey+(pagey/150)+"px")
+            $(".sakura_flower").css("left",pagex+"px")
+            $(".sakura_flower").css("top",pagey+"px")
+            $(".sakura_shadow").css("left",pagex+"px")
+            $(".sakura_shadow").css("top",pagey+(pagey/150)+"px")
             
-            $(".test").css
+            $(".sakura_flower").css
                 ("transform","translateY("+(pagey/-150)+"px)");
                 
             
-            $(".test").css("transform","rotate("+(pagey/-50)+"deg)")
-            $(".test_02").css("transform","rotate("+(pagey/-50)+"deg)")
+            $(".sakura_flower").css("transform","rotate("+(pagey/-50)+"deg)")
+            $(".sakura_shadow").css("transform","rotate("+(pagey/-50)+"deg)")
             })
             
             },
