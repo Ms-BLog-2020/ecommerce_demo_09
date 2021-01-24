@@ -204,8 +204,8 @@
     }
     header#event_page .container-fluid .event_time.b {
         grid-area: b;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("https://i.imgur.com/E6FNUkw.jpg");
-        background-size: auto 105%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("https://i.imgur.com/5YPzJW9.jpg");
+        background-size: auto 101%;
         transition-duration: 2s;
     }
     header#event_page .container-fluid .event_time.b:hover {
