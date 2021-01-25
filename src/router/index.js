@@ -9,12 +9,17 @@ import HomeCustomerOrders from '@/components/pages/HomeCustomerOrders';
 import HomeCustomerOrdersB from '@/components/pages/HomeCustomerOrdersB';
 import HomeCustomerOrdersC from '@/components/pages/HomeCustomerOrdersC';
 import AdminFinishPay from '@/components/pages/AdminFinishPay';
+import Coupon from '@/components/pages/Coupon';
+import HomeCouponActivity from '@/components/pages/HomeCouponActivity';
+import HomeCouponHoliday from '@/components/pages/HomeCouponHoliday';
+import HomeCouponEarlybird from '@/components/pages/HomeCouponEarlybird';
 
 import Checkout from '@/components/Checkout';
 import Productdetail from '@/components/Productdetail';
 import CheckoutFinishPay from '@/components/CheckoutFinishPay';
 import LandingPage from '@/components/LandingPage';
 import EventPage from '@/components/EventPage';
+import HomeCouponPage from '@/components/HomeCouponPage';
 
 Vue.use(VueRouter)
 
@@ -24,6 +29,7 @@ export default new VueRouter({
             path: '*',
             redirect: '/home', //避免用戶去不存在的頁面
         },
+        
         {
             name: 'Home',
             path: '/home',
@@ -44,6 +50,7 @@ export default new VueRouter({
                     path: '/customer_orders_c',
                     component: HomeCustomerOrdersC,
                 },
+                
                 
             ]
         },
@@ -73,6 +80,31 @@ export default new VueRouter({
             component: Productdetail,
         },
         {
+            name: 'HomeCouponPage',
+            path: '/home_coupon',
+            component: HomeCouponPage,
+            children: [
+                {
+                    name: 'HomeCouponActivity',
+                    path: '',
+                    component: HomeCouponActivity,
+                },
+                {
+                    name: 'HomeCouponHoliday',
+                    path: '/holiday',
+                    component: HomeCouponHoliday,
+                },
+                {
+                    name: 'HomeCouponEarlybird',
+                    path: '/early_bird',
+                    component: HomeCouponEarlybird,
+                },
+               
+                
+                
+            ]
+        },
+        {
             name: 'Login',
             path: '/login',
             component: Login,
@@ -92,6 +124,12 @@ export default new VueRouter({
                     name: 'AdminFinishPay',
                     path: 'admin_finish_pay',
                     component: AdminFinishPay,
+                    meta: { requiresAuth: true } //確保進入頁面前有經過驗證
+                },
+                {
+                    name: 'Coupon',
+                    path: 'coupon',
+                    component: Coupon,
                     meta: { requiresAuth: true } //確保進入頁面前有經過驗證
                 },
             ]

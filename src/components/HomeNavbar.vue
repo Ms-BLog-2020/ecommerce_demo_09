@@ -10,6 +10,12 @@
             </router-link>
             
             <div class="dropdown ml-auto">
+            <router-link to="/home" class="btn btn-sm btn-admin ml-2">
+                <i class="fas fa-home text-white fa-lg" aria-hidden="true"></i>
+            </router-link>
+            <router-link to="/home_coupon" class="btn btn-sm btn-admin ml-2">
+                <i class="fas fa-ticket-alt text-white fa-lg" aria-hidden="true"></i>
+            </router-link>
                 <button
                 class="btn btn-sm btn-cart position-relative"
                 data-toggle="dropdown"
@@ -51,6 +57,7 @@
                 </router-link>
                 </div>
             </div>
+            
             <router-link to="/login" class="btn btn-sm btn-admin ml-2">
                 <i class="fas fa-user text-white fa-lg" aria-hidden="true"></i>
             </router-link>

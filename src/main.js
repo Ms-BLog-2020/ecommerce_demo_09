@@ -36,6 +36,7 @@ import App from './App';
 import router from './router';
 import './router/bus';
 import currencyFilter from './filters/currency';
+import dateFilter from './filters/date';
 
 Vue.config.productionTip = false;
 Vue.use(VueAxios, axios);
@@ -43,6 +44,7 @@ Vue.use(VueAxios, axios);
 
 Vue.component('Loading', Loading);//此啟用方式為全域 不用到個別元件啟用
 Vue.filter('currency', currencyFilter); //自定義的名稱, import的名稱
+Vue.filter('date', dateFilter);
 
 axios.defaults.withCredentials = true;
 

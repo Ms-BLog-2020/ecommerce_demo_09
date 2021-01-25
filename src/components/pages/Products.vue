@@ -100,6 +100,9 @@
                             <option>茶道體驗</option>
                             <option>必備茶具</option>
                             <option>相關書籍</option>
+                            <option>早鳥優惠</option>
+                            <option>活動優惠</option>
+                            <option>節日優惠</option>
                         </select>
                     </div>
                     <div class="form-group col-md-6">

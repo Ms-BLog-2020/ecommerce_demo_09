@@ -51,15 +51,18 @@
                         <hr/>
                         <div class="card">
                         <div class="card-header" id="headingOne">
-                            <h6 class="mb-0 d-flex align-items-center">
+                            <p class="mb-0 d-flex align-items-center">
                             <a data-toggle="collapse" href="#collapseOne">
                                 顯示購物車細節
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>
                             </a>
-                            <span class="h3 ml-auto mb-0">{{ cart.total }}元</span>
-                            </h6>
+                            <span v-if="cart.final_total == cart.total" class="h3 ml-auto mb-0">{{ cart.total }}元</span>
+                            <span v-if="cart.final_total !== cart.total" class="h3 ml-auto mb-0">折價後 {{cart.final_total}}元</span>
+                            </p>
                         </div>
+                        
                         </div>
+                        
                         <div id="collapseOne" class="collapse mt-3">
                         <table class="table table-sm">
                             <thead>
@@ -74,7 +77,7 @@
                             <tbody>
                             <tr v-for="item in cart.carts">
                                 <td class="align-middle text-center">
-                                <a class="text-muted" data-toggle="modal" data-title="刪除 金牌西裝 1 件" @click="deleteCart(item.id)">
+                                <a class="text-muted" data-toggle="modal"  @click="deleteCart(item.id)">
                                     <i class="fa fa-trash-o" aria-hidden="true"></i>
                                 </a>
                                 </td>
@@ -85,21 +88,38 @@
                                 <td class="align-middle text-right">{{ item.final_total }}</td>
                                 
                             </tr>
-                            <tr>
-                            <td v-if="cart.final_total !== cart.total" class="list-group-item list-item-total d-flex justify-content-between text-accent">
-                              <span>折扣價</span>
-                              <strong class="h5 mb-0">$ {{cart.final_total}}</strong>
-                            </td>
-                            </tr>
+                            
                             <tr>
                                 <td colspan="4" class="text-right">合計</td>
                                 <td class="text-right">
                                 <strong>{{ cart.total }}元</strong>
                                 </td>
+                                
+                            </tr>
+                            <tr>
+                              <td  v-if="cart.final_total !== cart.total" colspan="4" class="text-right">折價後共</td>
+                                <td class="text-right">
+                                <strong v-if="cart.final_total !== cart.total">{{cart.final_total}}元</strong>
+                                </td>
                             </tr>
                             </tbody>
+                             
+                            
+                            
                         </table>
                         </div>
+                        <form class="glass glass-white card p-2 mt-3"
+                              @submit.prevent="addCouponCode">
+                              <div class="input-group">
+                                <input type="text" placeholder="請輸入優惠碼" v-model="coupon_code" class="form-control" />
+                                <div class="input-group-append">
+                                  <button type="submit" class="btn btn-sub text-secondery">套 用</button>
+                                </div>
+                              </div>
+                        </form>
+                        <div class="text-subLight mt-1 mb-0" v-if="coupon_message !== ''">※ {{coupon_message}}</div>
+                            <div class="coupon-code"><i>discount: </i>sakura</div>
+                        
                         
                   </div>
                   <div class="col-md-6 col-sm-12 col-buy-right">
@@ -205,6 +225,8 @@ export default {
       products: [],
       product: {}, //存放查看更多的Modal資料
       isLoading: false,
+      coupon_code: '',
+      coupon_message: '',
       status: {
         loadingItem: '', //存放產品id
       },
@@ -257,6 +279,24 @@ export default {
         vm.status.loadingItem = ''; //Modal打開後將值替換成空的
         vm.getCart(); //把購物車取得回來
         $('#productModal').modal('hide'); //加到購物車後關掉Modal
+      });
+    },
+    addCouponCode() {
+      const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/coupon`;
+      const vm = this;
+      const coupon = {
+        code: vm.coupon_code,
+      };
+      vm.isLoading = true;
+      this.$http.post(api, { data: coupon }).then((response) => {
+        // console.log(response.data);
+        if(response.data.success){
+          vm.getCart();
+          vm.coupon_message = '';
+        } else {
+          vm.coupon_message = response.data.message;
+        }
+        vm.isLoading = false;
       });
     },
     getCart(){

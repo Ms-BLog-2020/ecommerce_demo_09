@@ -46,11 +46,11 @@
                     <p class="class_intro" id="event">從基礎的茶道基本知識到春、夏、秋、冬四季不同的茶道流程，通通都在這堂課教你。</p>
                 </div>
                 <div class="event_img event_rigister f">
-                    <h3 class="event_title register_title" id="event">品茶活動<br/>報名</h3>
+                    <h3 class="event_title register_title" id="event">品茶活動<br/>優惠</h3>
                     <p class="register_intro" id="event">心動不如馬上行動!<br/>想體驗正統茶道, 立即報名即可享受!!<br/>把握限定在櫻花季開放的品茶體驗活動吧!!</p>
-                    <router-link to="/home" tag="div">
+                    <router-link to="/home_coupon" tag="div">
                     <button class="btn-outline-light register">
-                    馬上報名
+                    馬上領取優惠
                     </button>
                     </router-link>
                 </div>
