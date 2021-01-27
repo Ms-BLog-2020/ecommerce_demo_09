@@ -7,6 +7,7 @@
           <th>購買時間</th>
           <th>Email</th>
           <th>購買款項</th>
+          <th>預約時間</th>
           <th>應付金額</th>
           <th>是否付款</th>
         </tr>
@@ -22,6 +23,13 @@
               <li v-for="(product, i) in item.products" :key="i">
                 {{ product.product.title }} 數量：{{ product.qty }}
                 {{ product.product.unit }}
+              </li>
+            </ul>
+          </td>
+          <td>
+            <ul class="list-unstyled">
+              <li v-for="(product, i) in item.products" :key="i">
+                {{ product.due_date }} 
               </li>
             </ul>
           </td>

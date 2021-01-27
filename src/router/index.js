@@ -14,12 +14,14 @@ import HomeCouponActivity from '@/components/pages/HomeCouponActivity';
 import HomeCouponHoliday from '@/components/pages/HomeCouponHoliday';
 import HomeCouponEarlybird from '@/components/pages/HomeCouponEarlybird';
 
+
 import Checkout from '@/components/Checkout';
 import Productdetail from '@/components/Productdetail';
 import CheckoutFinishPay from '@/components/CheckoutFinishPay';
 import LandingPage from '@/components/LandingPage';
 import EventPage from '@/components/EventPage';
 import HomeCouponPage from '@/components/HomeCouponPage';
+import BookingCalender from '@/components/BookingCalender';
 
 Vue.use(VueRouter)
 
@@ -63,6 +65,11 @@ export default new VueRouter({
             name: 'EventPage',
             path: '/event_page',
             component: EventPage,
+        },
+        {
+            name: 'BookingCalender',
+            path: '/booking',
+            component: BookingCalender,
         },
         {
             name: 'Checkout',

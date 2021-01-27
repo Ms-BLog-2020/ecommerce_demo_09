@@ -25,7 +25,7 @@
                         查看更多
                     </button>
                     <button type="button" class="btn btn-outline-danger btn-sm ml-auto" @click="addtoCart(item.id)">
-                        <i class="fas fa-spinner fa-spin"></i>
+                        <i class="fas fa-spinner fa-spin" v-if="status.loadingItem === product.id"></i>
                         加到購物車
                     </button>
                     </div>

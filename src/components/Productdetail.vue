@@ -43,6 +43,11 @@
                         <select name="" class="form-control mr-1" id="" v-model="product.num">
                             <option v-for="num in 10" :value="num" :key="num">選購 {{num}} {{product.unit}}</option>
                         </select>
+                        <div class="form-group mt-3" v-if="product.category ==='茶道體驗'">
+                            <label for="due_date">預約體驗日期</label>
+                            <input type="date" class="form-control" id="due_date"
+                                v-model="product.due_date">
+                        </div>
                         <div class="h4 mt-3 text-accent text-right">
                             <span class="h6">總計 </span><strong>{{(product.price * product.num) | currency}}</strong>
                         </div>
@@ -53,15 +58,25 @@
                                 <i class="fas fa-caret-left"></i> 回到商品區
                                 </button>
                             </router-link>
+                            
                             <button href="shoppingCart-checkout.html" class="btn btn-accent"
-                                @click="addtoCart(product.id, product.num)">
+                                @click="addtoCart(product.id, product.num, product.due_date)" > 
                             <i class="fa fa-cart-plus" aria-hidden="true"></i> 加入購物車
                             </button>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <router-link to="/home_coupon">
+                                <button class="btn btn-outline-subLight">
+                                <i class="fas fa-caret-left"></i> 領取優惠券
+                                </button>
+                            </router-link>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+        
     </div>
 </template>
 
@@ -74,9 +89,13 @@ export default {
   },
     data() {
         return {
-            product: {},
+            product: {
+                due_date: 0, //把要新添的輸入功能定義資料 並在上方點選購物時 加到購物車內
+            },
             isLoading: false,
-            cart: {},
+            cart: {
+               
+            },
             prodId: '',
         }
     },
@@ -94,13 +113,14 @@ export default {
                 vm.isLoading = false;
             });
         }, 
-        addtoCart (id, qty = 1) {
+        addtoCart (id, qty = 1, due_date) { //將要輸入的資料置入 讓資料傳到購物車內
             const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart`;
             const vm = this;
             vm.isLoading = true;
             const cart = {
                 product_id: id,
-                qty
+                qty,
+                due_date
             }
             this.$http.post(api, { data: cart }).then((response) => {
                 // console.log(response.data)

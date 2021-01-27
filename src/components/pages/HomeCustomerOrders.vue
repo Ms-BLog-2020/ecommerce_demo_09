@@ -24,9 +24,10 @@
                         <i class="fas fa-spinner fa-spin"  v-if="status.loadingItem === product.id"></i>
                         查看更多
                     </button>
-                    <button type="button" class="btn btn-outline-danger btn-sm ml-auto" @click="addtoCart(item.id)">
-                        <i class="fas fa-spinner fa-spin"></i>
-                        加到購物車
+
+                    <button type="button" class="btn btn-outline-danger btn-sm ml-auto" @click="getProduct(item.id)">
+                        <i class="fas fa-spinner fa-spin" v-if="status.loadingItem === product.id"></i>
+                        體驗預約
                     </button>
                     </div>
                 </div>
@@ -68,6 +69,11 @@
                         選購{{num}} {{product.unit}}
                       </option>
                     </select>
+                    <div class="form-group mt-3">
+                            <label for="due_date">預約體驗日期</label>
+                            <input type="date" class="form-control" id="due_date"
+                                v-model="product.due_date">
+                    </div>
                     <div class="text-muted text-nowrap mr-3">
                     小計 NTD
                     <strong>
@@ -76,7 +82,7 @@
                       元
                     </div>
                     <div class="text-center">
-                    <button type="button" class="btn btn-primary add-to-cart" @click="addtoCart(product.id, product.num)">
+                    <button type="button" class="btn btn-primary add-to-cart" @click="addtoCart(product.id, product.num, product.due_date)">
                       <i class="fas fa-spinner fa-spin"  v-if="status.loadingItem === product.id"></i>
                       加到購物車
                     </button>
@@ -97,7 +103,9 @@ export default {
   data() {
     return {
       products: [],
-      product: {}, //存放查看更多的Modal資料
+      product: {
+         due_date: 0,
+      }, //存放查看更多的Modal資料
       isLoading: false,
       status: {
         loadingItem: '', //存放產品id
@@ -133,13 +141,14 @@ export default {
     productLink(id){
             this.$router.push(`/productdetail/${id}`);
     },
-    addtoCart(id,qty=1){ //ES6 預設值設定方法 qty=1
+    addtoCart(id,qty=1,due_date){ //ES6 預設值設定方法 qty=1
       const vm = this;
       const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart`;
       vm.status.loadingItem = id;
       const cart = { //定義資料結構
         product_id: id,
         qty,
+        due_date
       };
       this.$http.post(url, {data: cart}).then((response) => {
         console.log(response);

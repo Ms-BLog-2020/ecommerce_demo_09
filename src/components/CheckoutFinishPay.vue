@@ -49,6 +49,7 @@
                           <tr>
                           <th width="80">商品名稱</th>
                           <th></th>
+                          <th width="120">預約日期</th>
                           <th width="100">數量</th>
                           <th width="80">小計</th>
                           </tr>
@@ -58,6 +59,7 @@
                           
                           <td class="align-middle">{{item.product.title}}</td>
                           <td class="align-middle"></td>
+                          <td class="align-middle">{{item.due_date}}</td>
                           <td class="align-middle">{{item.product.num}}/{{item.product.unit}}</td>
                           <td class="align-middle text-right">${{ item.final_total }}元</td>
                           </tr>

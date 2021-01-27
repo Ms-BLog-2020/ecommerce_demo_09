@@ -39,9 +39,21 @@
                 </div>
                 <div class="col-md-12">
                 <router-view></router-view>
+                 <div class="d-flex justify-content-between">
+                    <button class="btn btn-outline-subLight" @click.prevent="beforePath">
+                    <i class="fas fa-caret-left"></i> 回到上一頁
+                    </button>
+                    <router-link to="/home">
+                        <button class="btn btn-outline-subLight">
+                        前往商品區
+                        <i class="fas fa-caret-right"></i> 
+                        </button>
+                    </router-link>
+                </div>
                 </div>
               </div>
             </div>
+           
             <HomeFooter />
 
             <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -63,6 +75,7 @@
                 </div>
               </div>
             </div>
+            
       </body>
 
     </div>
@@ -97,6 +110,11 @@ export default {
         HomeCouponSidebar,
         HomeFooter
   },
+  methods: {
+    beforePath() {
+      this.$router.back()
+    }
+  }
 };
 
 

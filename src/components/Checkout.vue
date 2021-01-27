@@ -70,7 +70,8 @@
                                 <th width="30"></th>
                                 <th width="30"></th>
                                 <th>商品名稱</th>
-                                <th width="100">數量</th>
+                                <th width="120">預約日期</th>
+                                <th width="80">數量</th>
                                 <th width="80">小計</th>
                             </tr>
                             </thead>
@@ -84,23 +85,24 @@
                                 <td class="align-middle">
                                 </td>
                                 <td class="align-middle">{{ item.product.title }}</td>
+                                <td class="align-middle">{{ item.due_date }}</td>
                                 <td class="align-middle">{{ item.qty }}/{{ item.product.unit }}</td>
                                 <td class="align-middle text-right">{{ item.final_total }}</td>
                                 
                             </tr>
                             
                             <tr>
-                                <td colspan="4" class="text-right">合計</td>
+                                <td colspan="5" class="text-right">合計</td>
                                 <td class="text-right">
                                 <strong>{{ cart.total }}元</strong>
                                 </td>
                                 
                             </tr>
                             <tr>
-                              <td  v-if="cart.final_total !== cart.total" colspan="4" class="text-right">折價後共</td>
+                              <td v-if="cart.final_total !== cart.total" colspan="5" class="text-right">折價後共</td>
                                 <td class="text-right">
                                 <strong v-if="cart.final_total !== cart.total">{{cart.final_total}}元</strong>
-                                </td>
+                              </td>
                             </tr>
                             </tbody>
                              
@@ -266,13 +268,14 @@ export default {
         vm.status.loadingItem = ''; //Modal打開後將值替換成空的
       });
     },
-    addtoCart(id,qty=1){ //ES6 預設值設定方法 qty=1
+    addtoCart(id,qty=1,due_date){ //ES6 預設值設定方法 qty=1
       const vm = this;
       const url = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart`;
       vm.status.loadingItem = id;
       const cart = { //定義資料結構
         product_id: id,
         qty,
+        due_date
       };
       this.$http.post(url, {data: cart}).then((response) => {
         console.log(response);
