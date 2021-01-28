@@ -3,17 +3,19 @@
         <nav class="navbar navbar-green bg-green">
             <div class="text-white"></div>
             <div class="container align-items-center">
-            <router-link to="/event_page" class="navbar-brand mr-4 d-inline-block text-white h6 mb-0" tag="div">
+            <router-link to="/home" class="navbar-brand mr-4 d-inline-block text-white h6 mb-0" tag="div">
                 <img src="https://i.imgur.com/35jozCX.png" alt="" id="homeLogo">
-                櫻花季活動
                 </img>
             </router-link>
             
             <div class="dropdown ml-auto">
-            <router-link to="/home" class="btn btn-sm btn-admin ml-2">
+            <router-link to="/home" class="btn btn-sm btn-admin ml-1">
                 <i class="fas fa-home text-white fa-lg" aria-hidden="true"></i>
             </router-link>
-            <router-link to="/home_coupon" class="btn btn-sm btn-admin ml-2">
+            <router-link to="/event_page" class="btn btn-sm btn-admin ml-1">
+                <i class="fas fa-star text-white fa-lg" aria-hidden="true"></i>
+            </router-link>
+            <router-link to="/home_coupon" class="btn btn-sm btn-admin ml-1">
                 <i class="fas fa-ticket-alt text-white fa-lg" aria-hidden="true"></i>
             </router-link>
                 <button
@@ -206,8 +208,8 @@ export default {
     border: none;
   }
   img#homeLogo {
-    width: 25%;
-    height: 25%;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
   }
   li.home-navbar-item {
