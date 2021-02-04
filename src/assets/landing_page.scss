@@ -8,6 +8,8 @@
 
     header {
     position: relative;
+    max-width: 100%;
+    overflow: hidden;
     margin-bottom: 0px;
     height: 800px;
     }
@@ -284,14 +286,14 @@
     top: 990px;
     }
     section#steps .line03 {
-    top: 1735px;
+    top: 1780px;
     width: 500px;
-    left: 46%;
+    left: 43%;
     }
     section#steps .line04 {
-    top: 2030px;
-    width: 470px;
-    left: 35%;
+    top: 2040px;
+    width: 500px;
+    left: 36%;
     }
     section#steps .row {
     margin-top: 200px;
@@ -323,7 +325,7 @@
     color: #7d7881;
     }
     section#steps .content.content03 {
-    padding: 0px 90px;
+    padding: 0px 50px;
     }
     section#steps .content h1 {
     font-size: 36px;
@@ -351,7 +353,7 @@
     footer.jumbotron {
     height: 800px;
     text-align: center;
-    background-image: url(https://i.imgur.com/TiFd46G.jpg);
+    background-image: url('https://i.imgur.com/TiFd46G.jpg');
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -471,9 +473,9 @@
             transform: translate(0%,0%);
             position: absolute;
         }
-        .container-fluid {
-            min-height: 3000px;
-        }
+        // .container-fluid {
+        //     min-height: 3000px;
+        // }
         section#steps .content {
         padding: 0px 50px;
         align-items: center;

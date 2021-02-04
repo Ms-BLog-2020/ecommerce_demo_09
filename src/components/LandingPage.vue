@@ -11,16 +11,14 @@
 
     
         <header id="video">
-            <video id="myVideo" autoplay="" muted="" loop="">
-                <source src="https://i.imgur.com/LiY18UE.mp4" type="video/mp4"/>
+            <video id="myVideo" src="@/assets/video/landingpage_teavideo.mp4" autoplay="" muted="" loop="">
             </video>
-            <embed src="" autostart="true" loop="true" width="2" height="0"/>
             <div class="container" id="header">
                 <div class="row top header_item" data-aos="fade-down" data-aos-duration="3000">
                 <div class="col-md-4">
                 <div class="row">
                     <div class="col-md-4" >
-                    <img id="icon" src="https://i.imgur.com/BCXtjMv.png" alt=""/>
+                    <img id="icon" src="@/assets/images/logo.png" alt=""/>
                     </div>
                     <div class="col-md-8" >
                     <div class="text-header" id="img" >
@@ -50,9 +48,11 @@
                 </div>
                 </div>
                 <div class="row bottom">
-                <div class="col-md-12  main-header"  data-aos="fade-up" data-aos-duration="3000">
+                <div class="col-md-12  main-header">
+                <div class="landing_page_title" data-aos="fade-up" data-aos-duration="3000">
                     <h1>你有多久沒有好好靜下來喝一杯茶了?</h1>
                     <h3>一杯のお茶のためにどれくらい落ち着かなかったのですか？</h3>
+                </div>
                 </div>
                 </div>
             </div>
@@ -150,7 +150,7 @@
                 
                 <div class="row top">
                 <div class="col-md-4">
-                    <div class="col-md-4" data-aos="fade-down" data-aos-duration="3000"><img id="icon" src="https://i.imgur.com/BCXtjMv.png" alt=""/></div>
+                    <div class="col-md-4" data-aos="fade-down" data-aos-duration="3000"><img id="icon" src="@/assets/images/logo.png" alt=""/></div>
                 </div>
                 <div class="col-md-4"></div>
                 <div class="col-md-4 poets" data-aos="fade-down" data-aos-duration="3000">

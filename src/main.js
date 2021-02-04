@@ -12,7 +12,13 @@ import { ValidationObserver, ValidationProvider, extend, localize, configure } f
 import TW from 'vee-validate/dist/locale/zh_TW.json'
 import * as rules from 'vee-validate/dist/rules';
 import $ from 'jquery';
+import VCalendar from 'v-calendar';
+import Calendar from 'v-calendar/lib/components/calendar.umd';
+import DatePicker from 'v-calendar/lib/components/date-picker.umd';
 
+Vue.use(VCalendar);
+Vue.component('calendar', Calendar);
+Vue.component('date-picker', DatePicker)
 
 window.$ = $;
 Object.keys(rules).forEach((rule) => {

@@ -146,6 +146,9 @@
         max-width: 1520px;
         overflow-x: hidden;
     }
+    header#event_page  {
+    min-height: 980px;
+    }
     header#event_page .sakura_flower {
     position: absolute;
     z-index: 0;
@@ -154,6 +157,7 @@
     width: 50%;
     height: 50%;
     transform: rotate(25deg);
+    z-index: 11;
     }
     header#event_page .sakura_shadow {
     position: absolute;
@@ -388,7 +392,6 @@
     background-attachment: fixed;
     background-size: cover;
     min-height: 850px;
-    padding-top: 180px;
     margin: 0px;
     color: white;
     text-align: center;
@@ -452,7 +455,10 @@
         transform: rotate(0deg);
     }
     }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
+    header#event_page  {
+    min-height: 2800px;
+    }
     header#event_page .container-fluid {
         min-height: 300px;
         grid-template-rows: repeat(3, 1fr);

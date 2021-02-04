@@ -4,8 +4,7 @@
             <div class="text-white"></div>
             <div class="container align-items-center">
             <router-link to="/home" class="navbar-brand mr-4 d-inline-block text-white h6 mb-0" tag="div">
-                <img src="https://i.imgur.com/35jozCX.png" alt="" id="homeLogo">
-                </img>
+                <img src="@/assets/images/logo.png" alt="" id="homeLogo"/>
             </router-link>
             
             <div class="dropdown ml-auto">
@@ -72,7 +71,7 @@
 import $ from 'jquery'; //載入modal
 
 
-var s = skrollr.init();
+
 
 
 export default {

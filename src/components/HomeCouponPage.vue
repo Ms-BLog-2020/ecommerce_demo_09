@@ -101,7 +101,7 @@ $(window).scroll(function(evt){
   
 });
 
-var s = skrollr.init();
+
 
 
 export default {

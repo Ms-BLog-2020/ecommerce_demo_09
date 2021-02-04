@@ -25,8 +25,8 @@
             <header class="jumbotron jumbotron-fluid jumbotron-bg d-flex align-items-end" id="home">
               <div class="container">
                 <div class="p-3 bg-lighter">
-                  <h1 class="display-3">你有多久沒有好好靜下來喝一杯茶了?</h1>
-                  <p class="lead">一杯のお茶のためにどれくらい落ち着かなかったのですか？</p>
+                  <h1 class="display-3">給自己品一杯茶的時間</h1>
+                  <p class="lead">お茶を楽しむ時間をとってください？</p>
                 </div>
               </div>
             </header>
@@ -88,7 +88,7 @@ $(window).scroll(function(evt){
   
 });
 
-var s = skrollr.init();
+
 
 
 export default {
