@@ -11,7 +11,7 @@
 
     
         <header id="video">
-            <video id="myVideo" src="@/assets/video/landingpage_teavideo.mp4" autoplay="" muted="" loop="">
+            <video id="myVideo" src="https://i.imgur.com/LiY18UE.mp4" autoplay="" muted="" loop="">
             </video>
             <div class="container" id="header">
                 <div class="row top header_item" data-aos="fade-down" data-aos-duration="3000">
