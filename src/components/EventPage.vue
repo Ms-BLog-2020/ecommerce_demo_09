@@ -8,12 +8,7 @@
         </head>
         <loading :active.sync="isLoading"></loading>
         <header id="event_page">
-            <div class="sakura_shadow">
-                <img id="sakura_shadow" src="https://i.imgur.com/axmJQ5M.png"/>
-            </div>
-            <div class="sakura_flower">
-                <img id="sakura_flower" src="https://i.imgur.com/WOIFE9T.png"/>
-            </div>
+            
             <div class="container-fluid" id="event_page_container">
                 <div class="event_img event_sakura a">
                 <router-link to="/home" tag="div">
@@ -73,15 +68,18 @@
             <div class="container-fluid" id="event_page_container">
                 <div class="row" id="event_page">
                 
-                    <div class="col-md-4 event_intro" id="event"><img class="people" id="logo_event_intro" src="https://i.imgur.com/kGfHTpo.png"/>
+                    <div class="col-md-4 event_intro" id="event">
+                    <img class="people" id="logo_event_intro" src="@/assets/images/eventpage_people.png"/>
                         <h3 class="event_intro" id="intro">小班制體驗</h3>
                         <p class="event_intro_content" id="event">每一堂課程皆有活動人數限定,讓您的品茶能夠有最佳品質體驗與感受! 每個人也都配有專屬的一套茶具,防疫期間可安心使用!趕快來報名體驗吧!!</p>
                     </div>
-                    <div class="col-md-4 event_intro" id="event"><img class="tradition" id="logo_event_intro" src="https://i.imgur.com/Ofg0dY8.png"/>
+                    <div class="col-md-4 event_intro" id="event">
+                    <img class="tradition" id="logo_event_intro" src="@/assets/images/eventpage_tradition.png"/>
                         <h3 class="event_intro" id="intro">傳統正宗</h3>
                         <p class="event_intro_content" id="event">茶道老師均為日本傳統茶道裹千家流派的正宗弟子, 讓您體驗到最正宗的日本茶道精神! 只要跟著老師的腳步, 您就能一步步體會到日本茶道之妙!!</p>
                     </div>
-                    <div class="col-md-4 event_intro" id="event"><img class="season" id="logo_event_intro" src="https://i.imgur.com/oDEemw2.png"/>
+                    <div class="col-md-4 event_intro" id="event">
+                    <img class="season" id="logo_event_intro" src="@/assets/images/eventpage_time.png"/>
                         <h3 class="event_intro" id="intro">最佳時節</h3>
                         <p class="event_intro_content" id="event">茶道在不同時節都有些微差異的流程, 但在櫻花時節絕對是體驗茶道的最佳季節!!在這櫻雪紛飛的盛放中, 一邊品茶一邊賞櫻, 何不樂哉!!</p>
                     </div>
@@ -113,23 +111,7 @@
             
             var video = document.getElementById("myEvent");
             var video_02 = document.getElementById("myVideo");
-            $(window).mousemove(function(evt){
-            var pagex=evt.pageX;
-            var pagey=evt.pageY;
-            console.log(pagex + "," + pagey)
             
-            $(".sakura_flower").css("left",pagex+"px")
-            $(".sakura_flower").css("top",pagey+"px")
-            $(".sakura_shadow").css("left",pagex+"px")
-            $(".sakura_shadow").css("top",pagey+(pagey/150)+"px")
-            
-            $(".sakura_flower").css
-                ("transform","translateY("+(pagey/-150)+"px)");
-                
-            
-            $(".sakura_flower").css("transform","rotate("+(pagey/-50)+"deg)")
-            $(".sakura_shadow").css("transform","rotate("+(pagey/-50)+"deg)")
-            })
             
             },
             
@@ -148,25 +130,8 @@
     }
     header#event_page  {
     min-height: 980px;
-    }
-    header#event_page .sakura_flower {
-    position: absolute;
-    z-index: 0;
-    }
-    header#event_page .sakura_flower img#sakura_flower {
-    width: 50%;
-    height: 50%;
-    transform: rotate(25deg);
-    z-index: 11;
-    }
-    header#event_page .sakura_shadow {
-    position: absolute;
-    }
-    header#event_page .sakura_shadow img#sakura_shadow {
-    width: 50%;
-    height: 50%;
-    transform: rotate(20deg);
-    opacity: 0.2;
+    max-width: 1520px;
+    overflow-x: hidden;
     }
     .container-fluid#event_page_container {
         max-width: 1520px;
@@ -388,6 +353,8 @@
     }
 
     section#event_intro {
+    overflow-x: hidden;    
+    max-width: 1520px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("https://i.imgur.com/oFJQ7XC.jpg");
     background-attachment: fixed;
     background-size: cover;

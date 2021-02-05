@@ -62,7 +62,11 @@
                 <div class="row" data-aos="fade-down"
                 data-aos-duration="3000">
                 <div class="col-md-4  powder_box">
-                    <div class="img"><img id="powder_box" src="https://i.imgur.com/Zl7y2im.png" alt=""/></div><img id="powder_spoon" src="https://i.imgur.com/RwfEFGz.png" alt=""/><img id="shadow" src="https://i.imgur.com/U3lrzAg.png" alt=""/>
+                    <div class="img">
+                    <img id="powder_box" src="@/assets/images/powder_box.png" alt=""/>
+                    </div>
+                    <img id="powder_spoon" src="@/assets/images/powder_spoon.png" alt=""/>
+                    <img id="shadow" src="@/assets/images/shadow.png" alt=""/>
                     <div class="text">
                     <div class="title">
                         <h4>茶杓</h4>
@@ -73,7 +77,10 @@
                     </div>
                     </div>
                 </div>
-                <div class="col-md-4  tea" ><img id="tea_shadow" src="https://i.imgur.com/BaGzubW.png" alt=""/><img id="tea" src="https://i.imgur.com/EOAXV4Q.png" alt=""/><img id="brush" src="https://i.imgur.com/Rn053NF.png" alt=""/>
+                <div class="col-md-4  tea" >
+                <img id="tea_shadow" src="@/assets/images/tea_shadow.png" alt=""/>
+                <img id="tea" src="@/assets/images/tea.png" alt=""/>
+                <img id="brush" src="@/assets/images/brush.png" alt=""/>
                     <div class="text_top">
                     <div class="title">
                         <h4>茶筅</h4>
@@ -84,7 +91,10 @@
                     </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 cover"><img id="shadow" src="https://i.imgur.com/U3lrzAg.png" alt=""/><img id="cover" src="https://i.imgur.com/4Pjd8Xj.png" alt=""/><img id="powder_box" src="https://i.imgur.com/Swmg2Du.png" alt=""/>
+                <div class="col-md-4 col-sm-12 cover">
+                <img id="shadow" src="@/assets/images/shadow.png" alt=""/>
+                <img id="cover" src="@/assets/images/cover.png" alt=""/>
+                <img id="powder_box" src="@/assets/images/powder.png" alt=""/>
                     <div class="text">
                     <div class="title">
                         <h4>薄器</h4>
@@ -103,7 +113,7 @@
                 <div class="row">
                 <div class="line line01"></div>
                 <div class="col-md-6 img" data-aos="fade-down" data-aos-duration="3000">
-                <img id="step01" class="mb-5" src="https://i.imgur.com/0ysURYv.jpg"/>
+                <img id="step01" class="mb-5" src="@/assets/images/step01.jpg"/>
                 </div>
                 <div class="col-md-6 content content01" data-aos="fade-down" data-aos-duration="3000">
                     <h1>備茶</h1>
@@ -114,7 +124,7 @@
                 <div class="row">
                 <div class="line line02"></div>
                 <div class="col-md-6 img" data-aos="fade-down" data-aos-duration="3000">
-                <img class="mb-5" id="step02" src="https://i.imgur.com/r27JR6F.jpg"/></div>
+                <img class="mb-5" id="step02" src="@/assets/images/step02.jpg"/></div>
                 <div class="col-md-6 orderlast content" data-aos="fade-down" data-aos-duration="3000">
                     <h1>沏茶</h1>
                     <h4>きっさ てじゅん</h4>
@@ -125,7 +135,7 @@
                 <div class="line line03"></div>
                 <div class="line line04"></div>
                 <div class="col-md-4 img" data-aos="fade-right" data-aos-duration="3000">
-                <img id="step03" class="mb-5" src="https://i.imgur.com/EDQJ3d7.jpg"/></div>
+                <img id="step03" class="mb-5" src="@/assets/images/step04.jpg"/></div>
                 <div class="col-md-4 content content03" data-aos="fade-down" data-aos-duration="3000">
                     <h1>奉茶</h1>
                     <h4>ぽんちゃ</h4>
