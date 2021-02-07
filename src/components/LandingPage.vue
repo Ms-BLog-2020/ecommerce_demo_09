@@ -145,19 +145,26 @@
                     <p>客人以右手拿杯、左手托住杯底, 品嘗後將茶碗歸還, 茶主會再將客人的茶碗清洗, 繼續為客人沏茶。<br> 客人們都品完茶後, 茶主將茶碗清洗乾淨並擦拭完後, 再將冷水倒入鍋內、把擦拭乾淨的茶具歸位完畢後, 茶會就告一段落。</p>
                 </div>
                 <div class="col-md-4 cup" data-aos="fade-down" data-aos-duration="3000" >
-                <img id="cup_step" src="https://i.imgur.com/AvuTyHM.png"/></div>
+                <img id="cup_step" src="@/assets/images/cup_step.png"/></div>
                 </div>
             </div>
             </section>
         <footer class="jumbotron"> 
             <div class="container">
+                <div class="row bottom">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 footer_content"  data-aos="fade-up" data-aos-duration="3000">
+                    <h1 id="footer">一起泡茶•享受當下</h1>
+                    <h3 id="footer">一緒にお茶を作る  今を楽しむ</h3>
+                    <router-link to="/home" tag="div" >
+                    <a id="footer" class="btn btn-white btn-animate">品茶去</a>
+                    </router-link>
+                </div>
+                <div class="col-md-4"></div>
                 
-                <router-link to="/home" tag="div" data-aos="fade-up" data-aos-duration="3000">
-                <h1>一起泡茶 • 享受當下</h1>
-                <h3>一緒にお茶を作る  今を楽しむ</h3>
-                </router-link>
+                </div>
                 
-                
+                                
                 <div class="row top">
                 <div class="col-md-4">
                     <div class="col-md-4" data-aos="fade-down" data-aos-duration="3000"><img id="icon" src="@/assets/images/logo.png" alt=""/></div>

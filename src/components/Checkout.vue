@@ -25,7 +25,7 @@
                 <div class="col-md-12 col-icon">
                   <div class="navigation">
                     
-                    <img class="tea" src="https://i.imgur.com/YiEgjNa.png" alt=""/>
+                    <img class="tea" src="@/assets/images/logo_green.png" alt=""/>
                     
                     <div class="home">
                     <router-link to="/home" tag="div">
@@ -357,7 +357,7 @@ export default {
   }
 
   header.jumbotron {
-    background-image: url(https://res.klook.com/images/fl_lossy.progressive,q_65/c_fit,w_1295,h_720,f_auto/w_80,x_15,y_15,g_south_west,l_klook_water/activities/q75bagntcomdftmlz0pr/TeaCeremonyinHokkaido.webp);
+    background-image: url("~@/assets/images/home_bgi.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;

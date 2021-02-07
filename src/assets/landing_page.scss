@@ -353,7 +353,7 @@
     footer.jumbotron {
     height: 800px;
     text-align: center;
-    background-image: url('https://i.imgur.com/TiFd46G.jpg');
+    background-image: url("~@/assets/images/landingpageFooter.jpg");
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -387,7 +387,92 @@
     top: 500px;
     left: 50%;
     transform: translate(-50%,-50%);
+    }
+    footer.jumbotron .container a#footer {
+        font-size: 16px;
+        letter-spacing: 5px;
+        position: relative;
+        top: 500px;
+        padding: 5px 30px;
+        border-radius: 100px;
+        cursor: pointer;
+    }
+    .btn#footer:link,
+    .btn#footer:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+    position: absolute;
     cursor: pointer;
+    }
+
+    .btn#footer:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn#footer:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-white {
+    background-color: #fff;
+    color: #777;
+    }
+
+    .btn#footer::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+    }
+
+    .btn-white::after {
+    background-color: #fff;
+    }
+
+    .btn#footer:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+    }
+
+    .btn-animated {
+    -webkit-animation: moveInBottom 5s ease-out;
+            animation: moveInBottom 5s ease-out;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+    }
+
+    @-webkit-keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    }
+
+    @keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
     }
     footer.jumbotron .container h3 {
     font-size: 16px;
@@ -452,6 +537,7 @@
 
         footer.jumbotron {
             height: 650px;
+            position: relative;
         }
         footer.jumbotron img#icon{
             top: 50%;
@@ -473,6 +559,25 @@
             transform: translate(0%,0%);
             position: absolute;
         }
+        footer.jumbotron .container .col-md-4.footer_content {
+            opacity: 1;
+            justify-content: center;
+            position: absolute;
+            margin-bottom: 100px;
+        }
+        footer.jumbotron .container h1#footer {
+            top: 500%;
+        }
+        footer.jumbotron .container h3#footer,h1#footer,a#footer {
+            position: absolute;
+        }
+        footer.jumbotron .container h3#footer,h1#footer,a#footer {
+            position: absolute;
+        }
+        footer.jumbotron .container h3#footer,h1#footer,a#footer {
+            position: absolute;
+        }
+        
         // .container-fluid {
         //     min-height: 3000px;
         // }

@@ -129,7 +129,7 @@ export default {
 
   header#coupon.jumbotron {
     text-align: center;
-    background-image: url(https://i.imgur.com/JZKvsRR.jpg);
+    background-image: url("~@/assets/images/coupon_bgi.jpg");
     background-size: cover;
     background-position:50% 50%;
     background-attachment: fixed;

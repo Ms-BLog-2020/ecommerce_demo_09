@@ -117,7 +117,7 @@ body {
   border-top-right-radius: 0;
 }
 header.jumbotron {
-    background-image: url(https://i.imgur.com/ArAhKSL.jpg);
+    background-image: url("~@/assets/images/login_bgi.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;

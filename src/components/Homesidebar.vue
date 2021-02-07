@@ -33,5 +33,8 @@
     margin-bottom: 0px;
     cursor: pointer;
   }
+  @media screen and (max-width: 768px) {
+  
+}
 </style>
 

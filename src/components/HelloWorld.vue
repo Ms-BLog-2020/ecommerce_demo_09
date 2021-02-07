@@ -23,11 +23,47 @@
             <HomeNavbar />
             
             <header class="jumbotron jumbotron-fluid jumbotron-bg d-flex align-items-end" id="home">
-              <div class="container">
-                <div class="p-3 bg-lighter">
+              <div class="container-fluid">
+              <div class="p-3 bg-lighter">
                   <h1 class="display-3">給自己品一杯茶的時間</h1>
-                  <p class="lead">お茶を楽しむ時間をとってください？</p>
+                  <p class="lead">お茶を楽しむ時間をとってください</p>
+              </div>
+              <div class="row">
+              <div class="col-md-12 p-0">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="@/assets/images/home_bgi_resize.jpg" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h2 class="pb-1">給自己品一杯茶的時間</h2>
+                      <p class="pb-4 text-white-50">お茶を楽しむ時間をとってください</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="@/assets/images/home_bgi_02.jpg" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h2 class="pb-1">櫻花祭限定體驗活動開跑囉!</h2>
+                      <p class="pb-2 text-white-50">さくらまつり限定体験イベント開始!</p>
+                      <router-link id="homepage_to_eventpage" class="btn btn-white btn-animate mb-4" to="/event_page" tag="div">了解更多
+                      </router-link>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="@/assets/images/home_bgi_03_resize.jpg" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h2 class="pb-1">飲茶有道，人生有味</h2>
+                      <p class="pb-4 text-white-50">お茶はいい、人生はいい</p>
+                    </div>
+                  </div>
                 </div>
+                </div>
+              </div>
+              </div>
               </div>
             </header>
 
@@ -226,7 +262,7 @@ export default {
 
   header#home.jumbotron {
     text-align: center;
-    background-image: url(https://res.klook.com/images/fl_lossy.progressive,q_65/c_fit,w_1295,h_720,f_auto/w_80,x_15,y_15,g_south_west,l_klook_water/activities/q75bagntcomdftmlz0pr/TeaCeremonyinHokkaido.webp);
+    background-image: url("~@/assets/images/home_bgi.jpg");
     background-size: cover;
     background-position:50% 40%;
     background-attachment: fixed;
@@ -273,7 +309,89 @@ export default {
     text-align: center;
     padding: 30px 80px;
   }
+  #homepage_to_eventpage {
+      font-size: 16px;
+      letter-spacing: 5px;
+      padding: 5px 30px;
+      border-radius: 100px;
+      cursor: pointer;
+  }
+  .btn#homepage_to_eventpage:link,
+  .btn#homepage_to_eventpage:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0px 40px;
+      display: inline-block;
+      border-radius: 100px;
+      transition: all 0.2s;
+      position: absolute;
+      cursor: pointer;
+  }
 
+  .btn#homepage_to_eventpage:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn#homepage_to_eventpage:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-white#homepage_to_eventpage {
+  background-color: #fff;
+  color: #777;
+  }
+
+  
+
+  .btn-white#homepage_to_eventpage::after {
+  background-color: #fff;
+  }
+
+  .btn#homepage_to_eventpage:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+  }
+
+  .btn-animated#homepage_to_eventpage {
+  -webkit-animation: moveInBottom 5s ease-out;
+          animation: moveInBottom 5s ease-out;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  }
+
+  @-webkit-keyframes moveInBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+  }
+
+  @keyframes moveInBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+  }
+@media screen and (max-width: 768px) {
+  header#home.jumbotron {
+    background-image: url("~@/assets/images/home_bgi.jpg");
+    max-height: 150px;
+  }
+  section.button.sticky-top {
+    text-align: center;
+    padding: 30px 80px;
+  }
+}
 
   </style>
 

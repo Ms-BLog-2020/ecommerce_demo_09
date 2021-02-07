@@ -149,7 +149,7 @@
     }
     header#event_page .container-fluid .event_sakura.a {
         grid-area: a;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/nGlMZR9.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url("~@/assets/images/a.jpg");
         background-size: auto 105%;
         transition-duration: 2s;
     }
@@ -167,13 +167,13 @@
         padding: 50px;
         margin-bottom: 30px;
         width: 50px;
-        background-image: url(https://i.imgur.com/BCXtjMv.png);
+        background-image: url("~@/assets/images/logo.png");
         background-size: cover;
         cursor: pointer;
     }
     header#event_page .container-fluid .event_time.b {
         grid-area: b;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("https://i.imgur.com/5YPzJW9.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("~@/assets/images/b.png");
         background-size: auto 101%;
         transition-duration: 2s;
     }
@@ -203,7 +203,7 @@
     }
     header#event_page .container-fluid .event_top.c {
     grid-area: c;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("https://i.imgur.com/4FSMcqF.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("~@/assets/images/c.jpg");
     background-size: auto 105%;
     transition-duration: 2s;
     }
@@ -222,7 +222,7 @@
     }
     header#event_page .container-fluid .event_middle.d {
     grid-area: d;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("https://i.imgur.com/KWuXMmI.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("~@/assets/images/d.jpg");
     background-size: auto 105%;
     transition-duration: 2s;
     }
@@ -241,7 +241,7 @@
     }
     header#event_page .container-fluid .event_bottom.e {
     grid-area: e;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("https://i.imgur.com/4xXmkGQ.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("~@/assets/images/e.jpg");
     background-size: auto 105%;
     transition-duration: 2s;
     }
@@ -260,7 +260,7 @@
     }
     header#event_page .container-fluid .event_rigister.f {
     grid-area: f;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("https://i.imgur.com/nZg7r9q.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("~@/assets/images/f.jpg");
     background-size: auto 105%;
     transition-duration: 2s;
     }
@@ -355,7 +355,7 @@
     section#event_intro {
     overflow-x: hidden;    
     max-width: 1520px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("https://i.imgur.com/oFJQ7XC.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("~@/assets/images/eventpage_bgi.jpg");
     background-attachment: fixed;
     background-size: cover;
     min-height: 850px;
