@@ -85,6 +85,8 @@
                     <img img="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=828346ed697837ce808cae68d3ddc3cf&auto=format&fit=crop&w=1350&q=80"
                     class="img-fluid" alt="" :src="tempProduct.imageUrl">
                 </div>
+                
+                
                 <div class="col-sm-8">
                     <div class="form-group">
                     <label for="title">標題</label>
@@ -135,6 +137,21 @@
                     <label for="content">說明內容</label>
                     <textarea type="text" class="form-control" id="content"
                         placeholder="請輸入產品說明內容" v-model="tempProduct.content"></textarea>
+                    </div>
+                    <div class="form-group">
+                    <label for="reminder">活動特色/商品規格</label>
+                    <textarea type="text" class="form-control" id="reminder"
+                        placeholder="請輸入 活動特色/商品規格" v-model="tempProduct.detail"></textarea>
+                    </div>
+                    <div class="form-group">
+                    <label for="reminder">體驗心得/評價分享</label>
+                    <textarea type="text" class="form-control" id="reminder"
+                        placeholder="請輸入 體驗心得/評價分享" v-model="tempProduct.review"></textarea>
+                    </div>
+                    <div class="form-group">
+                    <label for="reminder">貼心提醒</label>
+                    <textarea type="text" class="form-control" id="reminder"
+                        placeholder="請輸入產品說明內容" v-model="tempProduct.reminder"></textarea>
                     </div>
                     <div class="form-group">
                     <div class="form-check">
@@ -188,8 +205,13 @@ import $ from 'jquery'; //在main.js只有載入bootstrap 沒有載入jquery 所
 export default {
     data(){
         return{
-            products: [], //新增的資料都會存到products
-            tempProduct: {}, //要送出的新產品欄位內容 欄位名稱對應api設定的欄位標題
+            products: [
+            ], //新增的資料都會存到products
+            tempProduct: {
+                reminder: '',
+                detail: '',
+                review: '',
+            }, //要送出的新產品欄位內容 欄位名稱對應api設定的欄位標題
             isNew: false,
             isLoading: false, //預設為停下來的狀態
             status: { //宣告變數來使用loading
@@ -213,7 +235,11 @@ export default {
         },
         openModal(isNew, item){ //決定這份資歷是新的還是舊的
             if (isNew){
-                this.tempProduct={};
+                this.tempProduct={
+                    reminder,
+                    detail,
+                    review
+                };
                 this.isNew=true
             }else{
                 this.tempProduct=Object.assign({},item); //ES6寫法 將item寫入一個空的{}裡面 而this.temProduct不會直接和item有參考關係

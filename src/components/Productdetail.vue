@@ -30,7 +30,6 @@
                         <h1 class="h2 text-secondary pt-3">{{product.title}}</h1>
                         <p class="text-secondary">{{product.description}}</p>
                         <span class="tag bg-sub mt-4 ">{{product.category}}</span>
-                        
                         <div class="d-flex my-3 align-items-end justify-content-start mb-5">
                             <div class="h4 mb-0 mr-3 text-accent">
                                 單價 {{product.price | currency }}
@@ -40,6 +39,45 @@
                         <p class="card-text text-secondary mt-4">
                             {{product.content}}
                         </p>
+                        <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="h6 nav-link active mb-0" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" v-if="product.category !=='茶道體驗'">
+                            商品規格
+                            </a>
+                            <a class="h6 nav-link active mb-0" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" v-if="product.category ==='茶道體驗'">
+                            活動特色
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="h6 nav-link mb-0" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" v-if="product.category !=='茶道體驗'">
+                            評價分享
+                            </a>
+                            <a class="h6 nav-link mb-0" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" v-if="product.category ==='茶道體驗'">
+                            體驗心得
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="h6 nav-link mb-0" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                            貼心提醒
+                            </a>
+                        </li>
+                        
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active pt-3 pb-5" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            {{product.detail}}
+                            
+                            </div>
+                            <div class="tab-pane fade pt-3 pb-5" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            {{product.review}}
+                            </div>
+                            <div class="tab-pane fade pt-3 pb-5" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            {{product.reminder}}
+                            </div>
+                            
+                        </div>
+                        
+                        
                         <select name="" class="form-control mr-1" id="" v-model="product.num">
                             <option v-for="num in 10" :value="num" :key="num">選購 {{num}} {{product.unit}}</option>
                         </select>
@@ -48,6 +86,7 @@
                             <input type="date" class="form-control" id="due_date"
                                 v-model="product.due_date">
                         </div>
+                        
                         <div class="h4 mt-3 text-accent text-right">
                             <span class="h6">總計 </span><strong>{{(product.price * product.num) | currency}}</strong>
                         </div>
@@ -74,7 +113,11 @@
                     </div>
                 </div>
             </div>
+            
+            
         </div>
+        <HomeFooter />
+        
         
         
     </div>
@@ -82,10 +125,12 @@
 
 <script>
 import HomeNavbar from './HomeNavbar';
+import HomeFooter from './HomeFooter';
 
 export default {
      components: {
         HomeNavbar,
+        HomeFooter
   },
     data() {
         return {

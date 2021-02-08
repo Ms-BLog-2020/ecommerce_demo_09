@@ -51,19 +51,22 @@
                 </div>
                 <div class="event_img event_record g">
                 <h3 class="event_title record_title" id="event">品茶活動<br/>花絮</h3>
-                <video id="myEvent" autoplay="" muted="" loop="">
-                    <source src="https://i.imgur.com/VPKPlXn.mp4"/>
-                </video>
+                <div id="myEvent" class="video-background-eventpage-top">
+                <div class="video-foreground-eventpage-top">
+                    <iframe src="https://www.youtube.com/embed/hLMUfLl0Mbc?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                </div>
                 </div>
             </div>
             </header>
             
             <section id="event_intro">
             <section id="video">
-                <video id="myVideo" autoplay="" muted="" loop="">
-                    <source src="https://i.imgur.com/BDNpgSJ.mp4" type="video/mp4"/>
-                </video>
-                <embed src="" autostart="true" loop="true" width="2" height="0"/>
+                <div class="video-background-eventpage-bottom">
+                <div class="video-foreground-eventpage-bottom">
+                    <iframe src="https://www.youtube.com/embed/wzVmMojTq0o?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                </div>
             </section>
             <div class="container-fluid" id="event_page_container">
                 <div class="row" id="event_page">
@@ -129,7 +132,7 @@
         overflow-x: hidden;
     }
     header#event_page  {
-    min-height: 980px;
+    min-height: 950px;
     max-width: 1520px;
     overflow-x: hidden;
     }
@@ -302,17 +305,30 @@
     overflow: hidden;
     padding: 0px;
     }
-    header#event_page .container-fluid .event_record.g video#myEvent {
-    bottom: 0px;
-    right: 0px;
-    transform: scale(1.7);
+    header#event_page .container-fluid .event_record.g #myEvent {
+    transform: scale(6.5);
     filter: brightness(0.5);
     transition-duration: 2s;
+    background: #000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     }
-    header#event_page .container-fluid .event_record.g video#myEvent:hover {
+    .video-foreground-eventpage-top,
+    .video-background-eventpage-top iframe {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    }
+
+    
+    header#event_page .container-fluid .event_record.g #myEvent:hover {
     filter: brightness(1.2);
     }
-    header#event_page .container-fluid .event_record.g video#myEvent:hover h3#event {
+    header#event_page .container-fluid .event_record.g #myEvent:hover h3#event {
     text-shadow: 3px 3px 11px black;
     color: white;
     }
@@ -345,11 +361,54 @@
     opacity: 0;
     }
 
-    section#video #myVideo {
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
+    .video-background-eventpage-bottom {
+    background: #000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -99;
+    box-sizing: border-box;
+    min-height: 800px;
+    }
+    .video-foreground-eventpage-bottom,
+    .video-background-eventpage-bottom iframe {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    pointer-events: none;
+    box-sizing: border-box;
+    min-height: 850px;
+    }
+
+    @media (min-aspect-ratio: 16/9) {
+    .video-foreground-eventpage-bottom {
+        height: 300%;
+        top: -100%;
+        box-sizing: border-box;
+    }
+    }
+    @media (max-aspect-ratio: 16/9) {
+    .video-foreground-eventpage-bottom {
+        width: 300%;
+        left: -100%;
+        box-sizing: border-box;
+    }
+    }
+    @media all and (max-width: 600px) {
+    .vid-info {
+        width: 50%;
+        padding: 0.5rem;
+    }
+    .vid-info h1 {
+        margin-bottom: 0.2rem;
+    }
+    }
+    @media all and (max-width: 500px) {
+    .vid-info .acronym {
+        display: none;
+    }
     }
 
     section#event_intro {
@@ -424,7 +483,7 @@
     }
     @media screen and (max-width: 768px) {
     header#event_page  {
-    min-height: 2800px;
+    min-height: 2500px;
     }
     header#event_page .container-fluid {
         min-height: 300px;
