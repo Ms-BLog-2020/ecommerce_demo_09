@@ -117,7 +117,7 @@ body {
   border-top-right-radius: 0;
 }
 header.jumbotron {
-    background-image: url("~@/assets/images/login_bgi.jpg");
+    background-image: url("https://storage.googleapis.com/vue-course-api.appspot.com/ecommerce_project%2F1612843967263.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=fUBx5eoI2VArJduyvtDc43acYPjZKj9b2hKnOFv1ap4%2F5KagFJMlYRMifpnXfiuIujlNs0hE%2FS4Z26bnrkWv8VsypectPqWy9SjG9shtwJM44uysmT%2B6S2YHRdquc2%2Bd27Tq5FRdX%2FVMrRaDTSOqMESw%2BDW1CNf16wWvQlxqlmUGIGNWptd1E5ujYoDX%2FxtBbS%2FRhAr9P7MhZ%2FaZj8PoOHZZ3kLzjrgAlrEN6KStdY%2FFS6QZ0E%2FHwqPV%2BVdW1bPr1NSPyPfCT5mgWBWWMn%2Bh6T0YisHNqLUzjEKcTaPQvF5wRjp8PYEqVNdZye7ZDU13vC5H7LJbIXLVGIInPG5bQA%3D%3D");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;

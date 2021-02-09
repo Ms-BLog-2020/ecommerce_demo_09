@@ -105,6 +105,7 @@
                             <option>早鳥優惠</option>
                             <option>活動優惠</option>
                             <option>節日優惠</option>
+                            <option>圖片儲存</option>
                         </select>
                     </div>
                     <div class="form-group col-md-6">
@@ -140,12 +141,12 @@
                     </div>
                     <div class="form-group">
                     <label for="reminder">活動特色/商品規格</label>
-                    <textarea type="text" class="form-control" id="reminder"
+                    <textarea type="text" class="form-control" id="detail"
                         placeholder="請輸入 活動特色/商品規格" v-model="tempProduct.detail"></textarea>
                     </div>
                     <div class="form-group">
                     <label for="reminder">體驗心得/評價分享</label>
-                    <textarea type="text" class="form-control" id="reminder"
+                    <textarea type="text" class="form-control" id="review"
                         placeholder="請輸入 體驗心得/評價分享" v-model="tempProduct.review"></textarea>
                     </div>
                     <div class="form-group">

@@ -24,7 +24,7 @@
                 <div class="block"></div>
                 <div class="col-md-12 col-icon">
                   <div class="navigation">
-                    <img class="tea" src="@/assets/images/logo_green.png" alt=""/>
+                    <img class="tea" src="https://storage.googleapis.com/vue-course-api.appspot.com/ecommerce_project%2F1612840448324.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=FIC3%2FoVYn4Lm8nsm9nC0WlBRd5bbDCiJkrCRgBVim%2FKeYNdMkQX8yEuFcvIkd3acSvLSmX10WvNgfHMpq0%2B1pd%2BQKKskec3nB%2BPHDLFdgq1VHXzidhPPSOxZRVsPhaI9A6SYmpAv648EgQ4wztvJCV2r0X8kHJtDIXghDkXmFfxmI9F0P25g8Tqz1dWrwVyvQdI7DJHbYc%2BT6otsqAXQ2YZX22uIWdYGhY62lOut%2F501l9uKinFOPNP%2BCkO6UnwVVkaXiv8j8BeQbCmzoMYAKN0PvotF%2F3ljpT13xIlRAQdGYGMqXtJh2u%2F3LdCHSBbJYq7xGr6o9dfsHVTLxAxT%2Fw%3D%3D" alt=""/>
                     <div class="home">
                       <div class="japanese">ホーム </div>
                       <div class="chinese">首頁     </div>
@@ -178,7 +178,7 @@ export default {
   }
 
   header.jumbotron {
-    background-image: url("~@/assets/images/home_bgi.jpg");
+    background-image: url("https://storage.googleapis.com/vue-course-api.appspot.com/ecommerce_project%2F1612842324038.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=eTVyzaoB7VnftY%2FhV0T43ZVe3NZXYKkk3Bqw9246Ux3d3aHngi%2Fj6iJP7e%2BPChipZ3bhwH0NnSo5i%2FTNrZmcdNcLUphym2WyuSKCCKgsvxwhMbvvTG35ARGJ01V%2Fy%2Fxnkg%2Fnf2zFbp1oepuwz5qNm6wdhEeN1qlh58KHHBv6BqrS3Zel7j7N63mG60TeB%2FE3qyXq%2FCdyjWhxNDse%2FOAbfPdO17qyevgZiRRNArR%2FRhnnUa0q9%2Fw%2FGqPSSh4XATzgpVn%2FWOq%2B1wh6uq8wd4t8oEoMl3snTcOOx%2FWhWex6CGQVzLp%2BSRMW1COtDs4xTZTQExeITyszChrSBiJDcpUZHg%3D%3D");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;

@@ -129,7 +129,7 @@ export default {
 
   header#coupon.jumbotron {
     text-align: center;
-    background-image: url("~@/assets/images/coupon_bgi.jpg");
+    background-image: url("https://storage.googleapis.com/vue-course-api.appspot.com/ecommerce_project%2F1612842111732.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=iQZrCG5r44v15soiF%2BuR%2FjL2x64QVHpYNndGBKYKmSqxk801x6PoSsEVlxRSxCd298QsF8ff8NvdAQxmyJefR7yLegrjXFw2YBqgkG%2FIxSRE5ri%2Bn7sFjY1K92ZuGorTUNdoC%2Fh7nldq2IPtuwm8oWqPrdY0Sp2mlouYJXdLINJNpndTTBhnSUtBnBmhgLT6kvbZCMZQvF3w9n%2FOweKbWMzUc%2FJtSgbD3Hy7lzW3wsujA%2FUVma%2FyqHmEpWzhysoVmC6Ic2hxRkoESXiCeYE%2FY09OBja9Fyaczoo7vGJPf6UNAZ5fJwbVrrsUCasWAzaHAZx5cCaRAvXrIs66j%2BOvPQ%3D%3D");
     background-size: cover;
     background-position:50% 50%;
     background-attachment: fixed;

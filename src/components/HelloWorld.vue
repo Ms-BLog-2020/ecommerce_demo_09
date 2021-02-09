@@ -38,14 +38,14 @@
                 </ol>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img class="d-block w-100" src="@/assets/images/home_bgi_resize.jpg" alt="First slide">
+                    <img class="d-block w-100" src="https://storage.googleapis.com/vue-course-api.appspot.com/ecommerce_project%2F1612841523098.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=kGdbUubrC7OakiwvoIX84A5CmCu7zr4NRpFG1IUGK5C3iGJhbTP2E3b%2F%2Bnh9dufXE5Jb3J%2BdzIc%2BaD1FWf5WB7Wrn5RsQx0EYPWEQ0aZDqT%2F0pbjQdZKNSithKO7Xywp19tnXQxgPc1%2B3UrdpwKbjE1c1AGuAlh1X41CoIcdVArez0hbwCzMp9B5XlmxzxZ%2BQ6dSPfXmH5Az3aLHeTEjNGjK0sRuBKheaEH8CtaSUAa%2Fgz%2FWEvfpLXQHsFVy%2BjNtgm95Ckrv8fkzXzTBKcKn985sXK8n3POuZRw5SJydL8HzpFupexL42MthBZLiGi%2F8Ln0yfqilCb42Jqnxxklgzw%3D%3D" alt="First slide">
                     <div class="carousel-caption d-none d-md-block">
                       <h2 class="pb-1">給自己品一杯茶的時間</h2>
                       <p class="pb-4 text-white-50">お茶を楽しむ時間をとってください</p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="@/assets/images/home_bgi_02.jpg" alt="Second slide">
+                    <img class="d-block w-100" src="https://storage.googleapis.com/vue-course-api.appspot.com/ecommerce_project%2F1612841611612.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=YwqpA0oDPvsCE1TfPxiGyLog5kcQhNND6iW5ZYix%2BYlFsR9LcZDE3rcTnLdnVvf7BZPqoLy1DX94JkSYCoX7%2FjgQ5CTnb7aP0LEy60WfA%2BJ26npTd6Cle%2BkUPDzxXuwfCJKLfxtC%2FthAfPyoZB%2BQc3VQA0Yl2DVwGMV64el3DIIgPxyQHfWTj7PjCDOk95oVsKz34C0zFfkuGCjj1wEWWfPAJjPm9EZIGgqVz4gVZqtu%2FOy2N%2FX3AHfJXJ2vJdGXtzOXCvex5q6N00XHDJJv83rTGr6A%2BaESjeupXY4PztSvEBlIXh33g%2FLyiS%2BdOZ%2F77LJ%2FG1kF6GYLZyFz9i1bbg%3D%3D" alt="Second slide">
                     <div class="carousel-caption d-none d-md-block">
                       <h2 class="pb-1">櫻花祭限定體驗活動開跑囉!</h2>
                       <p class="pb-2 text-white-50">さくらまつり限定体験イベント開始!</p>
@@ -54,7 +54,7 @@
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="@/assets/images/home_bgi_03_resize.jpg" alt="Third slide">
+                    <img class="d-block w-100" src="https://storage.googleapis.com/vue-course-api.appspot.com/ecommerce_project%2F1612841678901.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=fH0LIBlHlTFbdnAWBho1ew2E7b%2BWm2hDap099kRxkl9Vq81yTXZGBjimq9Mm4Vh%2BnPeoK99H2RhI8CZrqTY5wPJW4uZMC5rauG2XT6SJMMlUECCLa1NnpmaPGUz%2BOb%2FWCnygoxl4n94Wr0ROTlswajOdtAMZgOKstor8TFlU0q0iq4PlnX14hysOcmQCYC%2FcDuOAtIlR01oWXC5XQFnYZ3mfMWjAwztF25E911SFaxds5Wxwl3s%2BM9lk6z%2BarGa29ZxIpXR4q1vC405AiHV72ZyDsmbr6aavQiGT05FONhbIRcA6qJHMzG6gE%2By9Gq%2BvWi2S9aegkz6WeVsPuRa6Tg%3D%3D" alt="Third slide">
                     <div class="carousel-caption d-none d-md-block">
                       <h2 class="pb-1">飲茶有道，人生有味</h2>
                       <p class="pb-4 text-white-50">お茶はいい、人生はいい</p>
@@ -262,10 +262,8 @@ export default {
 
   header#home.jumbotron {
     text-align: center;
-    background-image: url("~@/assets/images/home_bgi.jpg");
+    background-image: url("https://storage.googleapis.com/vue-course-api.appspot.com/ecommerce_project%2F1612841523098.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=kGdbUubrC7OakiwvoIX84A5CmCu7zr4NRpFG1IUGK5C3iGJhbTP2E3b%2F%2Bnh9dufXE5Jb3J%2BdzIc%2BaD1FWf5WB7Wrn5RsQx0EYPWEQ0aZDqT%2F0pbjQdZKNSithKO7Xywp19tnXQxgPc1%2B3UrdpwKbjE1c1AGuAlh1X41CoIcdVArez0hbwCzMp9B5XlmxzxZ%2BQ6dSPfXmH5Az3aLHeTEjNGjK0sRuBKheaEH8CtaSUAa%2Fgz%2FWEvfpLXQHsFVy%2BjNtgm95Ckrv8fkzXzTBKcKn985sXK8n3POuZRw5SJydL8HzpFupexL42MthBZLiGi%2F8Ln0yfqilCb42Jqnxxklgzw%3D%3D");
     background-size: cover;
-    background-position:50% 40%;
-    background-attachment: fixed;
     margin-bottom: 0px;
     padding: 0px;
     max-height: 520px;
@@ -384,7 +382,7 @@ export default {
   }
 @media screen and (max-width: 768px) {
   header#home.jumbotron {
-    background-image: url("~@/assets/images/home_bgi.jpg");
+    background-image: url("https://storage.googleapis.com/vue-course-api.appspot.com/ecommerce_project%2F1612841523098.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=kGdbUubrC7OakiwvoIX84A5CmCu7zr4NRpFG1IUGK5C3iGJhbTP2E3b%2F%2Bnh9dufXE5Jb3J%2BdzIc%2BaD1FWf5WB7Wrn5RsQx0EYPWEQ0aZDqT%2F0pbjQdZKNSithKO7Xywp19tnXQxgPc1%2B3UrdpwKbjE1c1AGuAlh1X41CoIcdVArez0hbwCzMp9B5XlmxzxZ%2BQ6dSPfXmH5Az3aLHeTEjNGjK0sRuBKheaEH8CtaSUAa%2Fgz%2FWEvfpLXQHsFVy%2BjNtgm95Ckrv8fkzXzTBKcKn985sXK8n3POuZRw5SJydL8HzpFupexL42MthBZLiGi%2F8Ln0yfqilCb42Jqnxxklgzw%3D%3D");
     max-height: 150px;
   }
   section.button.sticky-top {

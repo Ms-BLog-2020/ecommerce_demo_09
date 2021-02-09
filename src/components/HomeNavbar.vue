@@ -4,7 +4,7 @@
             <div class="text-white"></div>
             <div class="container align-items-center">
             <router-link to="/home" class="navbar-brand mr-4 d-inline-block text-white h6 mb-0" tag="div">
-                <img src="@/assets/images/logo.png" alt="" id="homeLogo"/>
+                <img src="https://storage.googleapis.com/vue-course-api.appspot.com/ecommerce_project%2F1612840382241.png?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=c%2BlAQl3dqRnocrGNq1L32USbEIDp6VODAuU7qyJihJAcMNxOK9a%2FInPPxFxsQdJnHoKWqKMkJyv3edTW%2Fcy342%2BZo5z%2FAFb2AYFwh7wp4ZuNdzqkahUGrIWgY3d699MKfPcX9qcRxLtO63BcDDgKNxIfIF3DyFDTUk982tlJk%2F8WyrKfyl3zDJ1FSJS3dPzxRqe02pgK2sbbOErbNck9eGy0ssqQTINQJNZZS8kRUAUOu%2BQ1nti0N0BmMw9TvD4bZaXh9Kt3PLVPV0utDG38z8HjRM%2FJfGdgiZb4k64VpkG6D%2FNRIu8lImxVyiKAwv6DL4F1KBMS14XvJk8GTYgYSA%3D%3D" alt="" id="homeLogo"/>
             </router-link>
             
             <div class="dropdown ml-auto">
