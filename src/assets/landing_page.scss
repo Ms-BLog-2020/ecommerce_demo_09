@@ -608,17 +608,26 @@
             margin-bottom: 100px;
         }
         footer.jumbotron .container h1#footer {
-            top: 500%;
-        }
-        footer.jumbotron .container h3#footer,h1#footer,a#footer {
+            top: 700%;
             position: absolute;
+            min-width: 350px;
+            
         }
-        footer.jumbotron .container h3#footer,h1#footer,a#footer {
-            position: absolute;
-        }
-        footer.jumbotron .container h3#footer,h1#footer,a#footer {
-            position: absolute;
-        }
+        // footer.jumbotron .container h1#footer {
+        //     position: absolute;
+        //     bottom: 5000%;
+        //     min-width: 350px;
+        // }
+        // footer.jumbotron .container h3#footer {
+        //     position: absolute;
+        //     bottom: 800%;
+        //     min-width: 350px;
+        // }
+        // footer.jumbotron .container a#footer {
+        //     position: absolute;
+        //     bottom: 600%;
+        //     min-width: 150px;
+        // }
         
         // .container-fluid {
         //     min-height: 3000px;
