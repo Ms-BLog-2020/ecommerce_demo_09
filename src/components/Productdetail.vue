@@ -39,43 +39,7 @@
                         <p class="card-text text-secondary mt-4">
                             {{product.content}}
                         </p>
-                        <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
-                        <li class="nav-item">
-                            <a class="h6 nav-link active mb-0" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" v-if="product.category !=='茶道體驗'">
-                            商品規格
-                            </a>
-                            <a class="h6 nav-link active mb-0" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" v-if="product.category ==='茶道體驗'">
-                            活動特色
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="h6 nav-link mb-0" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" v-if="product.category !=='茶道體驗'">
-                            評價分享
-                            </a>
-                            <a class="h6 nav-link mb-0" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" v-if="product.category ==='茶道體驗'">
-                            體驗心得
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="h6 nav-link mb-0" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
-                            貼心提醒
-                            </a>
-                        </li>
-                        
-                        </ul>
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active pt-3 pb-5" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            {{product.detail}}
-                            
-                            </div>
-                            <div class="tab-pane fade pt-3 pb-5" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            {{product.review}}
-                            </div>
-                            <div class="tab-pane fade pt-3 pb-5" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                            {{product.reminder}}
-                            </div>
-                            
-                        </div>
+                       
                         
                         
                         <select name="" class="form-control mr-1" id="" v-model="product.num">
@@ -113,7 +77,85 @@
                     </div>
                 </div>
             </div>
+            <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="h6 nav-link active mb-0" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" v-if="product.category !=='茶道體驗'">
+                商品規格
+                </a>
+                <a class="h6 nav-link active mb-0" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" v-if="product.category ==='茶道體驗'">
+                活動特色
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="h6 nav-link mb-0" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" v-if="product.category !=='茶道體驗'">
+                評價分享
+                </a>
+                <a class="h6 nav-link mb-0" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" v-if="product.category ==='茶道體驗'">
+                體驗心得
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="h6 nav-link mb-0" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                貼心提醒
+                </a>
+            </li>
             
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active pt-3 pb-5" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div v-html="product.detail"></div>
+                </div>
+                <div class="tab-pane fade pt-3 pb-5" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div v-html="product.review"></div>
+                </div>
+                <div class="tab-pane fade pt-3 pb-5" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <div v-html="product.reminder"></div>
+                </div>
+                
+            </div>
+            <ul class="nav nav-tabs mt-3" id="myTab" role="tablist" v-if="product.category !=='相關書籍'">
+            <li class="nav-item">
+                <a class="h6 nav-link active mb-0" id="record-tab" data-toggle="tab" href="#record" role="tab" aria-controls="record" aria-selected="true" v-if="product.category !=='茶道體驗'">
+                商品開箱 Ⅰ
+                </a>
+                <a class="h6 nav-link active mb-0" id="record-tab" data-toggle="tab" href="#record" role="tab" aria-controls="record" aria-selected="true" v-if="product.category ==='茶道體驗'">
+                活動花絮 Ⅰ
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="h6 nav-link mb-0" id="record-02-tab" data-toggle="tab" href="#record-02" role="tab" aria-controls="record-02" aria-selected="false" v-if="product.category !=='茶道體驗'">
+                商品開箱 Ⅱ
+                </a>
+                <a class="h6 nav-link mb-0" id="record-02-tab" data-toggle="tab" href="#record-02" role="tab" aria-controls="record-02" aria-selected="false" v-if="product.category ==='茶道體驗'">
+                活動花絮 Ⅱ
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="h6 nav-link mb-0" id="record-03-tab" data-toggle="tab" href="#record-03" role="tab" aria-controls="record-03" aria-selected="false" v-if="product.category !=='茶道體驗'">
+                商品開箱 Ⅲ
+                </a>
+                <a class="h6 nav-link mb-0" id="record-03-tab" data-toggle="tab" href="#record-03" role="tab" aria-controls="record-03" aria-selected="false" v-if="product.category ==='茶道體驗'">
+                活動花絮 Ⅲ
+                </a>
+            </li>
+            
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active pt-3 pb-5" id="record" role="tabpanel" aria-labelledby="record-tab">
+                <img :src="product.fn2Url" class="w-100 mb-3" alt="">
+                <div v-html="product.imgText2"></div>
+                
+                </div>
+                <div class="tab-pane fade pt-3 pb-5" id="record-02" role="tabpanel" aria-labelledby="record-02-tab">
+                <img :src="product.fn3Url" class="w-100 mb-3" alt="">
+                <div v-html="product.imgText3"></div>
+                </div>
+                <div class="tab-pane fade pt-3 pb-5" id="record-03" role="tabpanel" aria-labelledby="record-03-tab">
+                <img :src="product.fn4Url" class="w-100 mb-3" alt="">
+                <div v-html="product.imgText4"></div>
+                </div>
+                
+            </div>
             
         </div>
         <HomeFooter />

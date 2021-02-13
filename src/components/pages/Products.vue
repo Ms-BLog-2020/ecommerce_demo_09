@@ -69,7 +69,7 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-12">
                     <div class="form-group">
                     <label for="image">輸入圖片網址</label>
                     <input type="text" class="form-control" id="image"
@@ -84,6 +84,66 @@
                     </div>
                     <img img="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=828346ed697837ce808cae68d3ddc3cf&auto=format&fit=crop&w=1350&q=80"
                     class="img-fluid" alt="" :src="tempProduct.imageUrl">
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                    <label for="image">輸入 02 活動花絮/商品開箱 圖片網址</label>
+                    <input type="text" class="form-control" id="image2"
+                        placeholder="請輸入圖片連結" v-model="tempProduct.fn2Url">
+                    </div>
+                    <div class="form-group">
+                    <label for="customFile2">或上傳 02 活動花絮/商品開箱 圖片
+                        <i class="fas fa-spinner fa-spin" v-if="status.fileUploading"></i>
+                    </label>
+                    <input type="file" id="customFile2" class="form-control"
+                        ref="files2" @change="Imgfn2">
+                    </div>
+                    <label for="imgText2">02活動花絮/商品開箱 內文</label>
+                    <textarea type="text" class="form-control" id="imgText2"
+                        placeholder="請輸入02活動花絮/商品開箱 內文" v-model="tempProduct.imgText2"></textarea>
+                    <img img="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=828346ed697837ce808cae68d3ddc3cf&auto=format&fit=crop&w=1350&q=80"
+                    class="img-fluid" alt="" :src="tempProduct.fn2Url">
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                    <label for="image">輸入 03 活動花絮/商品開箱 圖片網址</label>
+                    <input type="text" class="form-control" id="image3"
+                        placeholder="請輸入圖片連結" v-model="tempProduct.fn2Url">
+                    </div>
+                    <div class="form-group">
+                    <label for="customFile3">或上傳 03 活動花絮/商品開箱 圖片
+                        <i class="fas fa-spinner fa-spin" v-if="status.fileUploading"></i>
+                    </label>
+                    <input type="file" id="customFile3" class="form-control"
+                        ref="files3" @change="Imgfn3">
+                    </div>
+                    <label for="imgText3">03活動花絮/商品開箱 內文</label>
+                    <textarea type="text" class="form-control" id="imgText3"
+                        placeholder="請輸入03活動花絮/商品開箱 內文" v-model="tempProduct.imgText3">
+                    </textarea>
+                    <img img="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=828346ed697837ce808cae68d3ddc3cf&auto=format&fit=crop&w=1350&q=80"
+                    class="img-fluid" alt="" :src="tempProduct.fn3Url">
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                    <label for="image">輸入 04 活動花絮/商品開箱 圖片網址</label>
+                    <input type="text" class="form-control" id="image4"
+                        placeholder="請輸入圖片連結" v-model="tempProduct.fn4Url">
+                    </div>
+                    <div class="form-group">
+                    <label for="customFile4">或上傳 04 活動花絮/商品開箱 圖片
+                        <i class="fas fa-spinner fa-spin" v-if="status.fileUploading"></i>
+                    </label>
+                    <input type="file" id="customFile4" class="form-control"
+                        ref="files4" @change="Imgfn4">
+                    </div>   
+                    <div class="form-group">
+                    <label for="imgText4">04活動花絮/商品開箱 內文</label>
+                    <textarea type="text" class="form-control" id="imgText4"
+                        placeholder="請輸入04活動花絮/商品開箱 內文" v-model="tempProduct.imgText4"></textarea>
+                    </div>
+                    <img img="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=828346ed697837ce808cae68d3ddc3cf&auto=format&fit=crop&w=1350&q=80"
+                    class="img-fluid" alt="" :src="tempProduct.fn4Url">
                 </div>
                 
                 
@@ -212,6 +272,9 @@ export default {
                 reminder: '',
                 detail: '',
                 review: '',
+                imgText2: '',
+                imgText3: '',
+                imgText4: ''
             }, //要送出的新產品欄位內容 欄位名稱對應api設定的欄位標題
             isNew: false,
             isLoading: false, //預設為停下來的狀態
@@ -239,7 +302,10 @@ export default {
                 this.tempProduct={
                     reminder,
                     detail,
-                    review
+                    review,
+                    imgText2,
+                    imgText3,
+                    imgText4
                 };
                 this.isNew=true
             }else{
@@ -270,6 +336,75 @@ export default {
 
                 }
             })
+        },
+        Imgfn2() {
+        console.log(this);
+        const Img2 = this.$refs.files2.files[0];
+        const vm = this;
+        const formData = new FormData();
+        formData.append('file-to-upload',Img2); //用append新增欄位file-to-upload 上傳檔案uploadFile
+        const  api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/upload`;
+        vm.status.fileUploading = true;
+        this.$http.post(api, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        }).then((response)=>{
+            console.log(response.data);
+            vm.status.fileUploading = false;
+            if (response.data.success){
+                vm.$set(vm.tempProduct, 'fn2Url', response.data.imageUrl); //在vm.tempProduct強制寫入imageUrl這個欄位和response.data.imageUrl這個路徑
+            }else{
+                    this.$bus.$emit('message:push',response.data.message,'danger');
+
+            }
+        })
+        },
+        Imgfn3() {
+        console.log(this);
+        const Img3 = this.$refs.files3.files[0];
+        const vm = this;
+        const formData = new FormData();
+        formData.append('file-to-upload',Img3); //用append新增欄位file-to-upload 上傳檔案uploadFile
+        const  api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/upload`;
+        vm.status.fileUploading = true;
+        this.$http.post(api, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        }).then((response)=>{
+            console.log(response.data);
+            vm.status.fileUploading = false;
+            if (response.data.success){
+                vm.$set(vm.tempProduct, 'fn3Url', response.data.imageUrl); //在vm.tempProduct強制寫入imageUrl這個欄位和response.data.imageUrl這個路徑
+            }else{
+                    this.$bus.$emit('message:push',response.data.message,'danger');
+
+            }
+        })
+        },
+        Imgfn4() {
+        console.log(this);
+        const Img4 = this.$refs.files4.files[0];
+        const vm = this;
+        const formData = new FormData();
+        formData.append('file-to-upload',Img4); //用append新增欄位file-to-upload 上傳檔案uploadFile
+        const  api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/upload`;
+        vm.status.fileUploading = true;
+        this.$http.post(api, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        }).then((response)=>{
+            console.log(response.data);
+            vm.status.fileUploading = false;
+            if (response.data.success){
+                vm.$set(vm.tempProduct, 'fn4Url', response.data.imageUrl); 
+            }else{
+                    this.$bus.$emit('message:push',response.data.message,'danger');
+
+            }
+        })
         },
         updateProduct(){
             let api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/admin/product`; //更改為取得商品的api
